@@ -1,0 +1,756 @@
+@import "/css/font-awesome.css";
+@import "compass/css3";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+@import "compass/utilities/sprites";
+@import "compass/utilities/general/hacks";
+@import "compass/reset";
+
+$motovelo: sprite-map("icon_motovelo/*.png", $position: 50%, $spacing: 50px, $repeat: no-repeat);
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/fonts/roboto_regular.eot");
+  src: url("/fonts/roboto_regular.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/roboto_regular.woff") format("woff"),
+  url("/fonts/roboto_regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("/fonts/Roboto-Medium.eot");
+  src: url("/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/Roboto-Medium.woff") format("woff"),
+  url("/fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/fonts/Roboto-Light.eot");
+  src: url("/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/Roboto-Light.woff") format("woff"),
+  url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("/fonts/Roboto-LightItalic.eot");
+  src: url("/fonts/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/Roboto-LightItalic.woff") format("woff"),
+  url("/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/fonts/Roboto-Bold.eot");
+  src: url("/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/Roboto-Bold.woff") format("woff"),
+  url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+$r: "Roboto-Regular";
+$rm: "Roboto-Medium";
+$rl: "Roboto-Light";
+$rli: "Roboto-LightItalic";
+$rb: "Roboto-Bold";
+
+html, body {
+  height: 100%;
+  font-family: $r;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  min-width: 1200px;
+}
+.no-left {
+  padding-left: 0;
+}
+.no-right {
+  padding-right: 0;
+}
+.no-all {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container {
+  min-width: 1170px;
+}
+a, span {
+  display: inline-block;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.content {
+  padding-bottom: 80px;
+  .home-page {
+    border-bottom: 1px solid #d1d1d1;
+    padding-top: 30px;
+    background-color: #f5f5f5;
+  }
+}
+footer {
+  border-top: 3px solid #1c3e97;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 15px;
+  width: 100%;
+  height: 80px;
+  font-size: 12px;
+}
+header {
+  .container {
+    position: relative;
+  }
+  .hid {
+    width: 115px;
+	height: 38px;
+    padding-left: 23px;
+    font-family: $rli;
+    left: 0;
+    position: absolute;
+	@include border-radius(19px);
+	background-color: #ddd;
+    border: 1px solid transparent;
+    outline: none;
+    color: #303030;
+    transition: 1s;
+    &:hover {
+      transition: 1s;
+    }
+  }
+  .logo {
+    h1 {
+      font-size: 34px;
+      color: #9c9c9c;
+      text-transform: uppercase;
+      line-height: 88px;
+    }
+  }
+  .phone {
+    h2 {
+      font-size: 24px;
+      color: #02040b;
+      line-height: 88px;
+      padding-left: 5px;
+    }
+  }
+  #catalog_link {
+     width: 159px;
+     height: 47px;
+     line-height: 47px;
+     color: #02060b;
+     padding-left: 33px;
+     margin-top: 19px;
+     background: #ffea00 sprite($motovelo, caret, 117px, 20px) no-repeat;
+     margin-left: 55px;
+     font-family: $rm;
+     float: left;
+   }
+  .top_menu {
+    font-family: $rl;
+    float: left;
+    margin-top: 28px;
+    margin-left: 40px;
+    li, li.open {
+      float: left;
+      padding: 0 20px;
+      a {
+        padding: 6px 0;
+        font-size: 16px;
+        color: #303030;
+        background: transparent;
+        border-bottom: 3px solid transparent;
+        &:hover, &:active, &:focus, &.active {
+          border-bottom: 3px solid #1c3e97;
+          background: transparent;
+        }
+      }
+      .caret {
+        border: none;
+        width: 20px;
+        height: 18px;
+        background: transparent sprite($motovelo, caret, 5px, 5px) no-repeat;
+      }
+    }
+    li.open {
+      .caret {
+        background: transparent sprite($motovelo, caret, 0px, 5px) no-repeat;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .search {
+    position: absolute;
+    text-align: right;
+    left: 100%;
+    top: 25px;
+    width: 445px;
+    margin-left: -445px;
+    #form-search {
+      width: 115px;
+      float: right;
+      position: relative;
+      .search-link {
+        padding-left: 32px;
+        background: #ddd url("/images/search.png") no-repeat 25px 11px;
+        width: 115px;
+        height: 38px;
+        position: absolute;
+        margin-left: -115px;
+        @include border-radius(19px);
+        line-height: 38px;
+        text-align: center;
+        font-size: 14px;
+        font-family: $rm;
+        color: #303030;
+        &.active, &:hover, &:focus, &:active {
+          background: #ddd url("/images/search.png") no-repeat 25px -25px;
+          color: #1c3e97;
+        }
+      }
+    }
+  }
+}
+#main_slider {
+  margin-bottom: 0;
+  .item {
+    height: 100%;
+  }
+  .slick-prev, .slick-next {
+    height: 41px;
+    background: transparent url("/images/slider_arrow.png") no-repeat;
+    margin-top: -20px;
+    width: 64px;
+    &:hover {
+      background-position: 0 -62px;
+    }
+    &:before {
+      content: "";
+    }
+  }
+  .slick-prev {
+    left: 0;
+    margin-left: calc((100% - 1170px) / 2);
+  }
+  .slick-next {
+    right: 0;
+    margin-right: calc((100% - 1170px) / 2);
+    transform: rotate(180deg);
+  }
+  .slick-dots {
+    bottom: 50px;
+    padding-left: calc((100% - 755px) / 2);
+    text-align: left;
+    .slick-active {
+      background: transparent sprite($motovelo, dots_active) no-repeat;
+    }
+    li {
+      background: transparent sprite($motovelo, dots) no-repeat;
+      margin-left: 0;
+      margin-right: 10px;
+      button {
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  .stock {
+    display: block;
+    float: left;
+    margin-left: calc((100% - 755px) / 2);
+    position: absolute;
+    bottom: 165px;
+    width: 113px;
+    height: 47px;
+    background-color: #fff;
+    color: #010101;
+    text-align: center;
+    line-height: 47px;
+  }
+  .link {
+    width: 237px;
+    height: 47px;
+    background-color: #fff;
+    display: block;
+    float: left;
+    position: absolute;
+    text-align: center;
+    line-height: 47px;
+    color: #010101;
+    margin-left: calc((100% - 490px) / 2);
+    bottom: 165px;
+  }
+}
+.opacity {
+  &:hover {
+    opacity: .9;
+  }
+}
+#index_tabs {
+  margin-top: 8px;
+  .nav-tabs {
+    border: none;
+    li {
+      padding: 0 25px;
+      outline: none;
+      &:nth-child(1) {
+        background: url("/images/popular.png") no-repeat 1px 4px;
+      }
+      &:nth-child(2) {
+        padding-left: 30px;
+        background: url("/images/news.png") no-repeat 12px 4px;
+      }
+      &:nth-child(3) {
+        padding-left: 40px;
+        background: url("/images/sales.png") no-repeat 15px 2px;
+      }
+      a {
+        font-family: $rm;
+        font-size: 16px;
+        color: #010101;
+        padding: 0;
+        border: none;
+        outline: none;
+        &:hover, &:active, &:focus {
+          background-color: transparent;
+          border-bottom: 2px solid #031f83;
+        }
+      }
+      &.active, &:hover, &:active, &:focus {
+        a {
+          background-color: transparent;
+          border-bottom: 2px solid #031f83;
+        }
+        &:nth-child(1) {
+          background: url("/images/popular.png") no-repeat 1px -30px;
+        }
+        &:nth-child(2) {
+          background: url("/images/news.png") no-repeat 12px -29px;
+        }
+        &:nth-child(3) {
+          background: url("/images/sales.png") no-repeat 15px -38px;
+        }
+      }
+    }
+  }
+  .tab-content {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 30px;
+    .tab-pane {
+      height: 0;
+      display: block;
+      overflow: hidden;
+      &.active {
+        height: auto;
+      }
+    }
+  }
+}
+.type_slider {
+  .slick-list.draggable {
+    position: relative;
+  }
+  .item {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 90px;
+    position: relative;
+    height: 286px;
+    .inner {
+      padding: 5px;
+      background-color: #fff;
+      border: 1px solid #c9c9c9;
+      height: 260px;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+      a.hidden_link {
+        line-height: 42px;
+        width: 100%;
+        border-top: 1px solid #d1d1d1;
+        font-family: $rm;
+        color: #1c3e97;
+        padding-left: 15px;
+        transition: .2s;
+        position: relative;
+        z-index: 9999;
+      }
+      &:hover {
+        box-shadow: 0px 0px 8px 2px #c9c9c9;
+        height: 352px;
+        transition: .2s;
+        .title {
+          text-decoration: underline;
+        }
+      }
+      img {
+        width: 100%;
+        height: 157px;
+        object-fit: contain;
+      }
+      .title {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left;
+        color: #1c3e97;
+        padding-top: 12px;
+        font-size: 14px;
+        overflow: hidden;
+        height: 50px;
+        padding-bottom: 0;
+        line-height: 20px;
+        margin-bottom: 12px;
+      }
+      .price {
+        font-family: $rb;
+        color: #000;
+        padding-left: 15px;
+        padding-bottom: 23px;
+      }
+    }
+  }
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 315px;
+    background: #fff url("/images/slider_type_arrow.png") no-repeat;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    border: 1px solid #d1d1d1;
+    &:before {
+      content: "";
+    }
+    &:hover {
+      border: 1px solid #1c3e97;
+      background-color: #1c3e97;
+    }
+  }
+  .slick-prev {
+    transform: rotate(180deg);
+    background-position: 12px 6px;
+    margin-left: 15px;
+    &:hover {
+      background-position: 12px -34px;
+    }
+  }
+  .slick-next {
+    margin-left: 49px;
+    background-position: 12px 7px;
+    &:hover {
+      background-position: 12px -33px;
+    }
+  }
+}
+.category_index {
+  margin-bottom: 60px;
+  .category_container {
+    position: relative;
+    height: 263px;
+    background-color: #fff;
+    border-bottom: 1px solid #d1d1d1;
+    .container {
+      height: 100%;
+      .row {
+        height: 100%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 100%;
+      }
+    }
+    .title {
+      font-size: 24px;
+      color: #fff;
+      font-family: $rl;
+      text-transform: uppercase;
+      float: left;
+      width: 370px;
+      line-height: 67px;
+      background: #1c3e97 sprite($motovelo, catalog_arrow_big, 325px, 24px) no-repeat;
+      &:hover {
+        a, span {
+          text-decoration: underline;
+        }
+      }
+      a {
+        color: #fff;
+      }
+      span {
+        font-family: $rb;
+      }
+    }
+    .fon {
+      height: 67px;
+      background-color: #1c3e97;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc((100% - 1170px) / 2);
+    }
+    .children.col-xs-2 {
+      color: #14328d;
+      font-family: $rl;
+      font-size: 18px;
+      margin-top: 23px;
+      li {
+        a {
+          line-height: 35px;
+          text-decoration: underline;
+          color: #14328d;
+          &:hover {
+            text-decoration: none;
+            color: #14328d;
+          }
+        }
+      }
+      &.long {
+        width: 20%;
+      }
+      .more {
+        font-family: $rb;
+        font-size: 14px;
+        padding-right: 15px;
+        color: #14328d;
+        text-decoration: underline;
+        line-height: 35px;
+        background: transparent sprite($motovelo, more, 120px, 13px) no-repeat;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.about_index {
+  padding-top: 40px;
+  background: url("/images/about.png") no-repeat;
+  height: 341px;
+  h1 {
+    font-size: 24px;
+    color: #fff;
+    font-family: $rm;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 14px;
+    font-family: $rl;
+    color: #fff;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.aksinterier {
+  height: 170px;
+  .logo {
+    background: url("/images/logo_aksinterier.png") no-repeat;
+    line-height: 170px;
+    height: 170px;
+    background-position: 0 23px;
+  }
+  h1 {
+    font-size: 30px;
+    color: #322574;
+  }
+  a {
+    width: 286px;
+    height: 68px;
+    background-color: #322574;
+    color: #fff;
+    text-align: left;
+    font-family: $rl;
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 68px;
+    padding-left: 23px;
+  }
+}
+#breadcrumbs {
+  height: 84px;
+  background-size: cover;
+  background: url("/images/about.png") no-repeat;
+  h1 {
+    font-size: 30px;
+    color: #fff;
+    float: left;
+    font-family: $rm;
+    line-height: 84px;
+    a {
+      color: #fff;
+      padding-left: 20px;
+      background: transparent sprite($motovelo, back, 0, 32px) no-repeat;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .breadcrumb {
+    line-height: 84px;
+    float: right;
+    color: #fff;
+    font-family: $rl;
+    font-size: 14px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 32px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.catalog_index {
+  margin-bottom: 40px;
+  .text {
+    font-family: $rl;
+    color: #131313;
+    h1 {
+      font-size: 24px;
+      font-family: $rm;
+      margin-bottom: 18px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .col-xs-3 {
+    &:hover {
+      text-decoration: none;
+      span {
+        text-decoration: none;
+      }
+    }
+    a {
+      width: 100%;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    img {
+      height: 170px;
+      width: 100%;
+      border: 1px solid #d1d1d1;
+      border-bottom: none;
+      object-fit: cover;
+    }
+    .title {
+      margin-top: -3px;
+      line-height: 43px;
+      color: #fff;
+      background-color: #1c3e97;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: underline;
+      padding-left: 30px;
+      span {
+        text-decoration: underline;
+        background: transparent sprite($motovelo, catalog_arrow_small, 100%, 18px) no-repeat;
+        padding-right: 35px;
+      }
+      &:hover {
+        text-decoration: none;
+        span {
+          text-decoration: none;
+        }
+      }
+    }
+    ul {
+      margin-top: 5px;
+      margin-bottom: 60px;
+      ul {
+        margin-bottom: 10px;
+        li {
+          a {
+            color: #141411;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: $rl;
+            &:hover {
+              color: #141411;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    li {
+      a {
+        font-family: $rl;
+        font-size: 18px;
+        color: #14328d;
+        text-decoration: underline;
+        line-height: 35px;
+        &:hover {
+          color: #14328d;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.two_columns {
+  background: #f5f5f5;
+  .left_side, .left_contacts {
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    padding-top: 20px;
+    padding-right: 0;
+    margin-bottom: 30px;
+    ul {
+      padding-bottom: 15px;
+      li {
+        a {
+          color: #8b8b8b;
+          font-size: 16px;
+          margin-left: 23px;
+          display: inline-block;
+          padding-left: 0;
+          padding-right: 0;
+          border-bottom: 3px solid transparent;
+          &:hover, &:focus, &:active {
+            background: none;
+            color: #1c3e97;
+            border-bottom: 3px solid #1c3e97;
+          }
+        }
+      }
+    }
+  }
+}
+.caption.cat-categories {
+  font-size: 16px;
+  font-family: $rb;
+  color: #b8b8b8;
+  text-transform: uppercase;
+  padding-left: 23px;
+  margin-bottom: 15px;
+}
+.page_title {
+  font-size: 24px;
+  color: #3c3c3c;
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 15px;
+}

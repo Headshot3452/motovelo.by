@@ -1,0 +1,914 @@
+@import url(/css/font-awesome.css);
+/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/fonts/roboto_regular.eot");
+  src: url("/fonts/roboto_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/roboto_regular.woff") format("woff"), url("/fonts/roboto_regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("/fonts/Roboto-Medium.eot");
+  src: url("/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto-Medium.woff") format("woff"), url("/fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/fonts/Roboto-Light.eot");
+  src: url("/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto-Light.woff") format("woff"), url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("/fonts/Roboto-LightItalic.eot");
+  src: url("/fonts/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto-LightItalic.woff") format("woff"), url("/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/fonts/Roboto-Bold.eot");
+  src: url("/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Roboto-Bold.woff") format("woff"), url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 67, common.scss */
+html, body {
+  height: 100%;
+  font-family: "Roboto-Regular";
+}
+
+/* line 71, common.scss */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  min-width: 1200px;
+}
+
+/* line 76, common.scss */
+.no-left {
+  padding-left: 0;
+}
+
+/* line 79, common.scss */
+.no-right {
+  padding-right: 0;
+}
+
+/* line 82, common.scss */
+.no-all {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 86, common.scss */
+.container {
+  min-width: 1170px;
+}
+
+/* line 89, common.scss */
+a, span {
+  display: inline-block;
+}
+/* line 91, common.scss */
+a:hover, a:focus, a:active, span:hover, span:focus, span:active {
+  text-decoration: none;
+}
+
+/* line 96, common.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 100, common.scss */
+.content {
+  padding-bottom: 80px;
+}
+/* line 102, common.scss */
+.content .home-page {
+  border-bottom: 1px solid #d1d1d1;
+  padding-top: 30px;
+  background-color: #f5f5f5;
+}
+
+/* line 108, common.scss */
+footer {
+  border-top: 3px solid #1c3e97;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 15px;
+  width: 100%;
+  height: 80px;
+  font-size: 12px;
+}
+
+/* line 119, common.scss */
+header .container {
+  position: relative;
+}
+/* line 122, common.scss */
+header .hid {
+  width: 115px;
+  height: 38px;
+  padding-left: 23px;
+  font-family: "Roboto-LightItalic";
+  left: 0;
+  position: absolute;
+  -moz-border-radius: 19px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+  background-color: #ddd;
+  border: 1px solid transparent;
+  outline: none;
+  color: #303030;
+  transition: 1s;
+}
+/* line 135, common.scss */
+header .hid:hover {
+  transition: 1s;
+}
+/* line 140, common.scss */
+header .logo h1 {
+  font-size: 34px;
+  color: #9c9c9c;
+  text-transform: uppercase;
+  line-height: 88px;
+}
+/* line 148, common.scss */
+header .phone h2 {
+  font-size: 24px;
+  color: #02040b;
+  line-height: 88px;
+  padding-left: 5px;
+}
+/* line 155, common.scss */
+header #catalog_link {
+  width: 159px;
+  height: 47px;
+  line-height: 47px;
+  color: #02060b;
+  padding-left: 33px;
+  margin-top: 19px;
+  background: #ffea00 url('/images/icon_motovelo-s73efb2b10e.png') 111px -50px no-repeat;
+  margin-left: 55px;
+  font-family: "Roboto-Medium";
+  float: left;
+}
+/* line 167, common.scss */
+header .top_menu {
+  font-family: "Roboto-Light";
+  float: left;
+  margin-top: 28px;
+  margin-left: 40px;
+}
+/* line 172, common.scss */
+header .top_menu li, header .top_menu li.open {
+  float: left;
+  padding: 0 20px;
+}
+/* line 175, common.scss */
+header .top_menu li a, header .top_menu li.open a {
+  padding: 6px 0;
+  font-size: 16px;
+  color: #303030;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+}
+/* line 181, common.scss */
+header .top_menu li a:hover, header .top_menu li a:active, header .top_menu li a:focus, header .top_menu li a.active, header .top_menu li.open a:hover, header .top_menu li.open a:active, header .top_menu li.open a:focus, header .top_menu li.open a.active {
+  border-bottom: 3px solid #1c3e97;
+  background: transparent;
+}
+/* line 186, common.scss */
+header .top_menu li .caret, header .top_menu li.open .caret {
+  border: none;
+  width: 20px;
+  height: 18px;
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -1px -65px no-repeat;
+}
+/* line 194, common.scss */
+header .top_menu li.open .caret {
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -6px -65px no-repeat;
+  transform: rotate(180deg);
+}
+/* line 200, common.scss */
+header .search {
+  position: absolute;
+  text-align: right;
+  left: 100%;
+  top: 25px;
+  width: 445px;
+  margin-left: -445px;
+}
+/* line 207, common.scss */
+header .search #form-search {
+  width: 115px;
+  float: right;
+  position: relative;
+}
+/* line 211, common.scss */
+header .search #form-search .search-link {
+  padding-left: 32px;
+  background: #ddd url("/images/search.png") no-repeat 25px 11px;
+  width: 115px;
+  height: 38px;
+  position: absolute;
+  margin-left: -115px;
+  -moz-border-radius: 19px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Roboto-Medium";
+  color: #303030;
+}
+/* line 224, common.scss */
+header .search #form-search .search-link.active, header .search #form-search .search-link:hover, header .search #form-search .search-link:focus, header .search #form-search .search-link:active {
+  background: #ddd url("/images/search.png") no-repeat 25px -25px;
+  color: #1c3e97;
+}
+
+/* line 232, common.scss */
+#main_slider {
+  margin-bottom: 0;
+}
+/* line 234, common.scss */
+#main_slider .item {
+  height: 100%;
+}
+/* line 237, common.scss */
+#main_slider .slick-prev, #main_slider .slick-next {
+  height: 41px;
+  background: transparent url("/images/slider_arrow.png") no-repeat;
+  margin-top: -20px;
+  width: 64px;
+}
+/* line 242, common.scss */
+#main_slider .slick-prev:hover, #main_slider .slick-next:hover {
+  background-position: 0 -62px;
+}
+/* line 245, common.scss */
+#main_slider .slick-prev:before, #main_slider .slick-next:before {
+  content: "";
+}
+/* line 249, common.scss */
+#main_slider .slick-prev {
+  left: 0;
+  margin-left: calc((100% - 1170px) / 2);
+}
+/* line 253, common.scss */
+#main_slider .slick-next {
+  right: 0;
+  margin-right: calc((100% - 1170px) / 2);
+  transform: rotate(180deg);
+}
+/* line 258, common.scss */
+#main_slider .slick-dots {
+  bottom: 50px;
+  padding-left: calc((100% - 755px) / 2);
+  text-align: left;
+}
+/* line 262, common.scss */
+#main_slider .slick-dots .slick-active {
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -7px -316px no-repeat;
+}
+/* line 265, common.scss */
+#main_slider .slick-dots li {
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -7px -254px no-repeat;
+  margin-left: 0;
+  margin-right: 10px;
+}
+/* line 270, common.scss */
+#main_slider .slick-dots li button:before {
+  content: "";
+}
+/* line 276, common.scss */
+#main_slider .stock {
+  display: block;
+  float: left;
+  margin-left: calc((100% - 755px) / 2);
+  position: absolute;
+  bottom: 165px;
+  width: 113px;
+  height: 47px;
+  background-color: #fff;
+  color: #010101;
+  text-align: center;
+  line-height: 47px;
+}
+/* line 289, common.scss */
+#main_slider .link {
+  width: 237px;
+  height: 47px;
+  background-color: #fff;
+  display: block;
+  float: left;
+  position: absolute;
+  text-align: center;
+  line-height: 47px;
+  color: #010101;
+  margin-left: calc((100% - 490px) / 2);
+  bottom: 165px;
+}
+
+/* line 304, common.scss */
+.opacity:hover {
+  opacity: .9;
+}
+
+/* line 308, common.scss */
+#index_tabs {
+  margin-top: 8px;
+}
+/* line 310, common.scss */
+#index_tabs .nav-tabs {
+  border: none;
+}
+/* line 312, common.scss */
+#index_tabs .nav-tabs li {
+  padding: 0 25px;
+  outline: none;
+}
+/* line 315, common.scss */
+#index_tabs .nav-tabs li:nth-child(1) {
+  background: url("/images/popular.png") no-repeat 1px 4px;
+}
+/* line 318, common.scss */
+#index_tabs .nav-tabs li:nth-child(2) {
+  padding-left: 30px;
+  background: url("/images/news.png") no-repeat 12px 4px;
+}
+/* line 322, common.scss */
+#index_tabs .nav-tabs li:nth-child(3) {
+  padding-left: 40px;
+  background: url("/images/sales.png") no-repeat 15px 2px;
+}
+/* line 326, common.scss */
+#index_tabs .nav-tabs li a {
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  color: #010101;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+/* line 333, common.scss */
+#index_tabs .nav-tabs li a:hover, #index_tabs .nav-tabs li a:active, #index_tabs .nav-tabs li a:focus {
+  background-color: transparent;
+  border-bottom: 2px solid #031f83;
+}
+/* line 339, common.scss */
+#index_tabs .nav-tabs li.active a, #index_tabs .nav-tabs li:hover a, #index_tabs .nav-tabs li:active a, #index_tabs .nav-tabs li:focus a {
+  background-color: transparent;
+  border-bottom: 2px solid #031f83;
+}
+/* line 343, common.scss */
+#index_tabs .nav-tabs li.active:nth-child(1), #index_tabs .nav-tabs li:hover:nth-child(1), #index_tabs .nav-tabs li:active:nth-child(1), #index_tabs .nav-tabs li:focus:nth-child(1) {
+  background: url("/images/popular.png") no-repeat 1px -30px;
+}
+/* line 346, common.scss */
+#index_tabs .nav-tabs li.active:nth-child(2), #index_tabs .nav-tabs li:hover:nth-child(2), #index_tabs .nav-tabs li:active:nth-child(2), #index_tabs .nav-tabs li:focus:nth-child(2) {
+  background: url("/images/news.png") no-repeat 12px -29px;
+}
+/* line 349, common.scss */
+#index_tabs .nav-tabs li.active:nth-child(3), #index_tabs .nav-tabs li:hover:nth-child(3), #index_tabs .nav-tabs li:active:nth-child(3), #index_tabs .nav-tabs li:focus:nth-child(3) {
+  background: url("/images/sales.png") no-repeat 15px -38px;
+}
+/* line 355, common.scss */
+#index_tabs .tab-content {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-top: 30px;
+}
+/* line 359, common.scss */
+#index_tabs .tab-content .tab-pane {
+  height: 0;
+  display: block;
+  overflow: hidden;
+}
+/* line 363, common.scss */
+#index_tabs .tab-content .tab-pane.active {
+  height: auto;
+}
+
+/* line 370, common.scss */
+.type_slider .slick-list.draggable {
+  position: relative;
+}
+/* line 373, common.scss */
+.type_slider .item {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 90px;
+  position: relative;
+  height: 286px;
+}
+/* line 379, common.scss */
+.type_slider .item .inner {
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  height: 260px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 388, common.scss */
+.type_slider .item .inner a.hidden_link {
+  line-height: 42px;
+  width: 100%;
+  border-top: 1px solid #d1d1d1;
+  font-family: "Roboto-Medium";
+  color: #1c3e97;
+  padding-left: 15px;
+  transition: .2s;
+  position: relative;
+  z-index: 9999;
+}
+/* line 399, common.scss */
+.type_slider .item .inner:hover {
+  box-shadow: 0px 0px 8px 2px #c9c9c9;
+  height: 352px;
+  transition: .2s;
+}
+/* line 403, common.scss */
+.type_slider .item .inner:hover .title {
+  text-decoration: underline;
+}
+/* line 407, common.scss */
+.type_slider .item .inner img {
+  width: 100%;
+  height: 157px;
+  object-fit: contain;
+}
+/* line 412, common.scss */
+.type_slider .item .inner .title {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+  color: #1c3e97;
+  padding-top: 12px;
+  font-size: 14px;
+  overflow: hidden;
+  height: 50px;
+  padding-bottom: 0;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+/* line 425, common.scss */
+.type_slider .item .inner .price {
+  font-family: "Roboto-Bold";
+  color: #000;
+  padding-left: 15px;
+  padding-bottom: 23px;
+}
+/* line 433, common.scss */
+.type_slider .slick-prev, .type_slider .slick-next {
+  position: absolute;
+  top: 315px;
+  background: #fff url("/images/slider_type_arrow.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  left: 0;
+  border: 1px solid #d1d1d1;
+}
+/* line 441, common.scss */
+.type_slider .slick-prev:before, .type_slider .slick-next:before {
+  content: "";
+}
+/* line 444, common.scss */
+.type_slider .slick-prev:hover, .type_slider .slick-next:hover {
+  border: 1px solid #1c3e97;
+  background-color: #1c3e97;
+}
+/* line 449, common.scss */
+.type_slider .slick-prev {
+  transform: rotate(180deg);
+  background-position: 12px 6px;
+  margin-left: 15px;
+}
+/* line 453, common.scss */
+.type_slider .slick-prev:hover {
+  background-position: 12px -34px;
+}
+/* line 457, common.scss */
+.type_slider .slick-next {
+  margin-left: 49px;
+  background-position: 12px 7px;
+}
+/* line 460, common.scss */
+.type_slider .slick-next:hover {
+  background-position: 12px -33px;
+}
+
+/* line 465, common.scss */
+.category_index {
+  margin-bottom: 60px;
+}
+/* line 467, common.scss */
+.category_index .category_container {
+  position: relative;
+  height: 263px;
+  background-color: #fff;
+  border-bottom: 1px solid #d1d1d1;
+}
+/* line 472, common.scss */
+.category_index .category_container .container {
+  height: 100%;
+}
+/* line 474, common.scss */
+.category_index .category_container .container .row {
+  height: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+/* line 481, common.scss */
+.category_index .category_container .title {
+  font-size: 24px;
+  color: #fff;
+  font-family: "Roboto-Light";
+  text-transform: uppercase;
+  float: left;
+  width: 370px;
+  line-height: 67px;
+  background: #1c3e97 url('/images/icon_motovelo-s73efb2b10e.png') 325px -105px no-repeat;
+}
+/* line 491, common.scss */
+.category_index .category_container .title:hover a, .category_index .category_container .title:hover span {
+  text-decoration: underline;
+}
+/* line 495, common.scss */
+.category_index .category_container .title a {
+  color: #fff;
+}
+/* line 498, common.scss */
+.category_index .category_container .title span {
+  font-family: "Roboto-Bold";
+}
+/* line 502, common.scss */
+.category_index .category_container .fon {
+  height: 67px;
+  background-color: #1c3e97;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((100% - 1170px) / 2);
+}
+/* line 510, common.scss */
+.category_index .category_container .children.col-xs-2 {
+  color: #14328d;
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  margin-top: 23px;
+}
+/* line 516, common.scss */
+.category_index .category_container .children.col-xs-2 li a {
+  line-height: 35px;
+  text-decoration: underline;
+  color: #14328d;
+}
+/* line 520, common.scss */
+.category_index .category_container .children.col-xs-2 li a:hover {
+  text-decoration: none;
+  color: #14328d;
+}
+/* line 526, common.scss */
+.category_index .category_container .children.col-xs-2.long {
+  width: 20%;
+}
+/* line 529, common.scss */
+.category_index .category_container .children.col-xs-2 .more {
+  font-family: "Roboto-Bold";
+  font-size: 14px;
+  padding-right: 15px;
+  color: #14328d;
+  text-decoration: underline;
+  line-height: 35px;
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') 112px -429px no-repeat;
+}
+/* line 537, common.scss */
+.category_index .category_container .children.col-xs-2 .more:hover {
+  text-decoration: none;
+}
+
+/* line 544, common.scss */
+.about_index {
+  padding-top: 40px;
+  background: url("/images/about.png") no-repeat;
+  height: 341px;
+}
+/* line 548, common.scss */
+.about_index h1 {
+  font-size: 24px;
+  color: #fff;
+  font-family: "Roboto-Medium";
+  margin-bottom: 30px;
+}
+/* line 554, common.scss */
+.about_index p {
+  font-size: 14px;
+  font-family: "Roboto-Light";
+  color: #fff;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 563, common.scss */
+.aksinterier {
+  height: 170px;
+}
+/* line 565, common.scss */
+.aksinterier .logo {
+  background: url("/images/logo_aksinterier.png") no-repeat;
+  line-height: 170px;
+  height: 170px;
+  background-position: 0 23px;
+}
+/* line 571, common.scss */
+.aksinterier h1 {
+  font-size: 30px;
+  color: #322574;
+}
+/* line 575, common.scss */
+.aksinterier a {
+  width: 286px;
+  height: 68px;
+  background-color: #322574;
+  color: #fff;
+  text-align: left;
+  font-family: "Roboto-Light";
+  margin-top: 50px;
+  font-size: 22px;
+  line-height: 68px;
+  padding-left: 23px;
+}
+
+/* line 588, common.scss */
+#breadcrumbs {
+  height: 84px;
+  background-size: cover;
+  background: url("/images/about.png") no-repeat;
+}
+/* line 592, common.scss */
+#breadcrumbs h1 {
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  font-family: "Roboto-Medium";
+  line-height: 84px;
+}
+/* line 598, common.scss */
+#breadcrumbs h1 a {
+  color: #fff;
+  padding-left: 20px;
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -5px 32px no-repeat;
+}
+/* line 602, common.scss */
+#breadcrumbs h1 a:hover {
+  text-decoration: underline;
+}
+/* line 607, common.scss */
+#breadcrumbs .breadcrumb {
+  line-height: 84px;
+  float: right;
+  color: #fff;
+  font-family: "Roboto-Light";
+  font-size: 14px;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 32px;
+}
+/* line 616, common.scss */
+#breadcrumbs .breadcrumb a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 619, common.scss */
+#breadcrumbs .breadcrumb a:hover {
+  text-decoration: none;
+}
+
+/* line 625, common.scss */
+.catalog_index {
+  margin-bottom: 40px;
+}
+/* line 627, common.scss */
+.catalog_index .text {
+  font-family: "Roboto-Light";
+  color: #131313;
+}
+/* line 630, common.scss */
+.catalog_index .text h1 {
+  font-size: 24px;
+  font-family: "Roboto-Medium";
+  margin-bottom: 18px;
+}
+/* line 635, common.scss */
+.catalog_index .text p {
+  margin-bottom: 20px;
+}
+/* line 640, common.scss */
+.catalog_index .col-xs-3:hover {
+  text-decoration: none;
+}
+/* line 642, common.scss */
+.catalog_index .col-xs-3:hover span {
+  text-decoration: none;
+}
+/* line 646, common.scss */
+.catalog_index .col-xs-3 a {
+  width: 100%;
+}
+/* line 648, common.scss */
+.catalog_index .col-xs-3 a:hover {
+  text-decoration: none;
+}
+/* line 652, common.scss */
+.catalog_index .col-xs-3 img {
+  height: 170px;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-bottom: none;
+  object-fit: cover;
+}
+/* line 659, common.scss */
+.catalog_index .col-xs-3 .title {
+  margin-top: -3px;
+  line-height: 43px;
+  color: #fff;
+  background-color: #1c3e97;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 30px;
+}
+/* line 668, common.scss */
+.catalog_index .col-xs-3 .title span {
+  text-decoration: underline;
+  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') 100% -180px no-repeat;
+  padding-right: 35px;
+}
+/* line 673, common.scss */
+.catalog_index .col-xs-3 .title:hover {
+  text-decoration: none;
+}
+/* line 675, common.scss */
+.catalog_index .col-xs-3 .title:hover span {
+  text-decoration: none;
+}
+/* line 680, common.scss */
+.catalog_index .col-xs-3 ul {
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+/* line 683, common.scss */
+.catalog_index .col-xs-3 ul ul {
+  margin-bottom: 10px;
+}
+/* line 686, common.scss */
+.catalog_index .col-xs-3 ul ul li a {
+  color: #141411;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Roboto-Light";
+}
+/* line 691, common.scss */
+.catalog_index .col-xs-3 ul ul li a:hover {
+  color: #141411;
+  text-decoration: none;
+}
+/* line 700, common.scss */
+.catalog_index .col-xs-3 li a {
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  color: #14328d;
+  text-decoration: underline;
+  line-height: 35px;
+}
+/* line 706, common.scss */
+.catalog_index .col-xs-3 li a:hover {
+  color: #14328d;
+  text-decoration: none;
+}
+
+/* line 714, common.scss */
+.two_columns {
+  background: #f5f5f5;
+}
+/* line 716, common.scss */
+.two_columns .left_side, .two_columns .left_contacts {
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  padding-top: 20px;
+  padding-right: 0;
+  margin-bottom: 30px;
+}
+/* line 722, common.scss */
+.two_columns .left_side ul, .two_columns .left_contacts ul {
+  padding-bottom: 15px;
+}
+/* line 725, common.scss */
+.two_columns .left_side ul li a, .two_columns .left_contacts ul li a {
+  color: #8b8b8b;
+  font-size: 16px;
+  margin-left: 23px;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 3px solid transparent;
+}
+/* line 733, common.scss */
+.two_columns .left_side ul li a:hover, .two_columns .left_side ul li a:focus, .two_columns .left_side ul li a:active, .two_columns .left_contacts ul li a:hover, .two_columns .left_contacts ul li a:focus, .two_columns .left_contacts ul li a:active {
+  background: none;
+  color: #1c3e97;
+  border-bottom: 3px solid #1c3e97;
+}
+
+/* line 743, common.scss */
+.caption.cat-categories {
+  font-size: 16px;
+  font-family: "Roboto-Bold";
+  color: #b8b8b8;
+  text-transform: uppercase;
+  padding-left: 23px;
+  margin-bottom: 15px;
+}
+
+/* line 751, common.scss */
+.page_title {
+  font-size: 24px;
+  color: #3c3c3c;
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 15px;
+}
