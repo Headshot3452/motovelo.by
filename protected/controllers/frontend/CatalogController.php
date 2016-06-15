@@ -89,6 +89,7 @@
         public function actionTree($url)
         {
             $pages = explode('/', $url);
+            $menu_items = array();
             $root = CatalogTree::model()->language($this->getCurrentLanguage()->id)->roots()->active()->findByPk($this->root_id);
 
             if (!$root)
@@ -114,6 +115,8 @@
                     $id = $path['item']['id'];
                 }
 
+                $tree = $this->getPageTree($id);
+
                 $count_breadcrumbs = count($path['breadcrumbs']);
 
                 if ($count_page > $count_breadcrumbs && ($count_page - 1) == $count_breadcrumbs)
@@ -137,7 +140,27 @@
                     $this->setSeoTags($product);
                     $this->setText($product);
 
-                    $this->render('product', array('product' => $product));
+                    $this->layout = 'two_columns';
+
+                    $parent = CatalogTree::model()->active()->findByPk($id)->parent()->find();
+                    $menu = $parent->children()->active()->findAll();
+
+                    foreach ($menu as $item)
+                    {
+                        $active = '';
+                        if($item->findUrlForItem('name', false, $this->root_id).$item->name == $url)
+                        {
+                            $active = 'active';
+                        }
+                        elseif($item->id == $id)
+                        {
+                            $active = 'active';
+                        }
+
+                        $menu_items[] = array('label' => $item->title, 'active' => $active, 'url' => $this->createUrl('catalog/tree', array('url' => $tree->findUrlForItem('name', false, $this->root_id).$item->name)));
+                    }
+
+                    $this->render('product', array('product' => $product, 'menu_items' => $menu_items));
                     Yii::app()->end();
                 }
                 elseif ($count_page != $count_breadcrumbs)
@@ -152,12 +175,12 @@
 
             $this->getPageModule('tree');
 
+            $tree = $this->getPageTree($id);
+
             if (!empty($path['breadcrumbs']))
             {
                 $this->setBreadcrumbs($path['breadcrumbs'], 'catalog/tree');
             }
-
-            $tree = $this->getPageTree($id);
 
             if (isset($tree))
             {
@@ -191,22 +214,17 @@
                     }
                 }
 
-                $count = Yii::app()->request->cookies['count'];
-
-                if (!isset($count))
-                {
-                    $count = 9;
-                }
-                else
-                {
-                    $count = $count->value;
-                }
-
                 $trees = $tree->children()->active()->findAll();
-                $products = CatalogProducts::model()->getDataProviderForCategory($id, $order, $count);
+                $des = $tree->descendants()->active()->findAll();
+
+                if($trees)
+                {
+                    $id = CHtml::listData($des, 'id', 'id');
+                }
+
+                $products = CatalogProducts::model()->getDataProviderForCategory($id, $order, 6);
             }
 
-            $menu_items = array();
             $menu = $trees;
 
             if (empty($trees))
@@ -234,7 +252,7 @@
             }
 
             $this->layout = 'two_columns';
-            $this->render('tree', array('menu_items' => $menu_items, 'trees' => $trees, 'dataProducts' => $products, 'tree' => $tree, 'count' => $count));
+            $this->render('tree', array('menu_items' => $menu_items, 'trees' => $trees, 'dataProducts' => $products, 'tree' => $tree, 'count' => 6));
         }
 
         protected function getPageTree($id)

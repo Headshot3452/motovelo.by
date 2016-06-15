@@ -41,6 +41,8 @@ class BsPager extends CBasePager
      */
     public $activeLabelSrOnly;
 
+    public $lastestPageLabel;
+
     /**
      * @var boolean whether the "first" and "last" buttons should be hidden.
      * Defaults to false.

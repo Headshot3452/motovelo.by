@@ -272,13 +272,22 @@
             return self::model()->active()->findAll('t.`parent_id` = :parent_id', array('parent_id' => $parent_id));
         }
 
-        public function getDataProviderForCategory($parent_id, $order = '', $count = 10)
+        public function getDataProviderForCategory($parent_id, $order = 'sort', $count = 6)
         {
             $criteria = new CDbCriteria;
-            $criteria->condition = 't.`parent_id` = :parent_id';
-            $criteria->params = array(
-                'parent_id' => $parent_id,
-            );
+
+            if(is_array($parent_id))
+            {
+                $id = implode(", ", $parent_id);
+                $criteria->condition = 't.`parent_id` IN ('.$id.')';
+            }
+            else
+            {
+                $criteria->condition = 't.`parent_id` = :parent_id';
+                $criteria->params = array(
+                    'parent_id' => $parent_id,
+                );
+            }
 
             $criteria->scopes = array(
                 'active'
@@ -289,67 +298,10 @@
                 $criteria->order = $order;
             }
 
-            if(isset($_GET))
-            {
-                unset($_GET["url"]);
-                if($_GET)
-                {
-                    $criteria->with = array(
-                        'parameters.value' => array('alias' => 'v'),
-                    );
-
-                    $counter = 0;
-
-                    foreach($_GET as $key => $value)
-                    {
-                        if($key == 'price-from')
-                        {
-                            $criteria->compare('t.`price`', '>='.$value);
-                        }
-                        elseif($key == 'price-to')
-                        {
-                            $criteria->compare('t.`price`', '<='.$value);
-                        }
-                        else
-                        {
-                            $criteria->together = true;
-
-                            $key = str_replace("m", "", $key);
-
-                            if(is_numeric($key))
-                            {
-                                $list = implode(',', array_values($value));
-                                $par[] = '(v.`params_id` = '.$key.' AND v.`id` IN ('.$list.'))';
-                                $counter++;
-
-                            }
-                        }
-                    }
-
-                    if(isset($par))
-                    {
-                        $pars = implode($par, ' OR ');
-
-                        $criteria->mergeWith(
-                            array(
-                                'condition' => $pars
-                            )
-                        );
-
-                        if($counter > 0)
-                        {
-                            $criteria->group = 't.`id`';
-                            $criteria->having = 'COUNT(t.`id`)='.$counter;
-                        }
-                    }
-                }
-            }
-
             return new CActiveDataProvider($this,
                 array(
                     'criteria'   => $criteria,
                     'pagination' => array(
-                        'class'    => 'CustomPagination',
                         'pageSize' => $count,
                         'pageVar'  => 'page'
                     ),
@@ -449,8 +401,11 @@
             $sign = $same ? '=' : '';
 
             $category = $this->getInstanceRelation('parent')->findByPk($category_id);
+
             if (!$category)
+            {
                 throw new InvalidArgumentException('Категория с id=' . $category_id . ' не найдена');
+            }
 
             $this->with('parent');
             $array = $this->getCriteriaAlias();

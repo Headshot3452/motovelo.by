@@ -217,7 +217,7 @@ header #catalog_link {
   color: #02060b;
   padding-left: 33px;
   margin-top: 19px;
-  background: #ffea00 url('/images/icon_motovelo-s73efb2b10e.png') 111px -50px no-repeat;
+  background: #ffea00 url('/images/icon_motovelo-s8d959c49ad.png') 111px -121px no-repeat;
   margin-left: 55px;
   font-family: "Roboto-Medium";
   float: left;
@@ -252,11 +252,11 @@ header .top_menu li .caret, header .top_menu li.open .caret {
   border: none;
   width: 20px;
   height: 18px;
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -1px -65px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') -1px -136px no-repeat;
 }
 /* line 194, common.scss */
 header .top_menu li.open .caret {
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -6px -65px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') -6px -136px no-repeat;
   transform: rotate(180deg);
 }
 /* line 200, common.scss */
@@ -339,11 +339,11 @@ header .search #form-search .search-link.active, header .search #form-search .se
 }
 /* line 262, common.scss */
 #main_slider .slick-dots .slick-active {
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -7px -316px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') -7px -387px no-repeat;
 }
 /* line 265, common.scss */
 #main_slider .slick-dots li {
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -7px -254px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') -7px -325px no-repeat;
   margin-left: 0;
   margin-right: 10px;
 }
@@ -494,24 +494,29 @@ header .search #form-search .search-link.active, header .search #form-search .se
   transition: .2s;
   position: relative;
   z-index: 9999;
+  text-decoration: underline;
 }
 /* line 399, common.scss */
+.type_slider .item .inner a.hidden_link:hover {
+  text-decoration: none;
+}
+/* line 403, common.scss */
 .type_slider .item .inner:hover {
   box-shadow: 0px 0px 8px 2px #c9c9c9;
   height: 352px;
   transition: .2s;
 }
-/* line 403, common.scss */
+/* line 407, common.scss */
 .type_slider .item .inner:hover .title {
   text-decoration: underline;
 }
-/* line 407, common.scss */
+/* line 411, common.scss */
 .type_slider .item .inner img {
   width: 100%;
   height: 157px;
   object-fit: contain;
 }
-/* line 412, common.scss */
+/* line 416, common.scss */
 .type_slider .item .inner .title {
   padding-left: 15px;
   padding-right: 15px;
@@ -525,14 +530,14 @@ header .search #form-search .search-link.active, header .search #form-search .se
   line-height: 20px;
   margin-bottom: 12px;
 }
-/* line 425, common.scss */
+/* line 429, common.scss */
 .type_slider .item .inner .price {
   font-family: "Roboto-Bold";
   color: #000;
   padding-left: 15px;
   padding-bottom: 23px;
 }
-/* line 433, common.scss */
+/* line 437, common.scss */
 .type_slider .slick-prev, .type_slider .slick-next {
   position: absolute;
   top: 315px;
@@ -542,58 +547,58 @@ header .search #form-search .search-link.active, header .search #form-search .se
   left: 0;
   border: 1px solid #d1d1d1;
 }
-/* line 441, common.scss */
+/* line 445, common.scss */
 .type_slider .slick-prev:before, .type_slider .slick-next:before {
   content: "";
 }
-/* line 444, common.scss */
+/* line 448, common.scss */
 .type_slider .slick-prev:hover, .type_slider .slick-next:hover {
   border: 1px solid #1c3e97;
   background-color: #1c3e97;
 }
-/* line 449, common.scss */
+/* line 453, common.scss */
 .type_slider .slick-prev {
   transform: rotate(180deg);
   background-position: 12px 6px;
   margin-left: 15px;
 }
-/* line 453, common.scss */
+/* line 457, common.scss */
 .type_slider .slick-prev:hover {
   background-position: 12px -34px;
 }
-/* line 457, common.scss */
+/* line 461, common.scss */
 .type_slider .slick-next {
   margin-left: 49px;
   background-position: 12px 7px;
 }
-/* line 460, common.scss */
+/* line 464, common.scss */
 .type_slider .slick-next:hover {
   background-position: 12px -33px;
 }
 
-/* line 465, common.scss */
+/* line 469, common.scss */
 .category_index {
   margin-bottom: 60px;
 }
-/* line 467, common.scss */
+/* line 471, common.scss */
 .category_index .category_container {
   position: relative;
   height: 263px;
   background-color: #fff;
   border-bottom: 1px solid #d1d1d1;
 }
-/* line 472, common.scss */
+/* line 476, common.scss */
 .category_index .category_container .container {
   height: 100%;
 }
-/* line 474, common.scss */
+/* line 478, common.scss */
 .category_index .category_container .container .row {
   height: 100%;
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 100%;
 }
-/* line 481, common.scss */
+/* line 485, common.scss */
 .category_index .category_container .title {
   font-size: 24px;
   color: #fff;
@@ -602,21 +607,21 @@ header .search #form-search .search-link.active, header .search #form-search .se
   float: left;
   width: 370px;
   line-height: 67px;
-  background: #1c3e97 url('/images/icon_motovelo-s73efb2b10e.png') 325px -105px no-repeat;
+  background: #1c3e97 url('/images/icon_motovelo-s8d959c49ad.png') 325px -176px no-repeat;
 }
-/* line 491, common.scss */
+/* line 495, common.scss */
 .category_index .category_container .title:hover a, .category_index .category_container .title:hover span {
   text-decoration: underline;
 }
-/* line 495, common.scss */
+/* line 499, common.scss */
 .category_index .category_container .title a {
   color: #fff;
 }
-/* line 498, common.scss */
+/* line 502, common.scss */
 .category_index .category_container .title span {
   font-family: "Roboto-Bold";
 }
-/* line 502, common.scss */
+/* line 506, common.scss */
 .category_index .category_container .fon {
   height: 67px;
   background-color: #1c3e97;
@@ -625,29 +630,29 @@ header .search #form-search .search-link.active, header .search #form-search .se
   left: 0;
   width: calc((100% - 1170px) / 2);
 }
-/* line 510, common.scss */
+/* line 514, common.scss */
 .category_index .category_container .children.col-xs-2 {
   color: #14328d;
   font-family: "Roboto-Light";
   font-size: 18px;
   margin-top: 23px;
 }
-/* line 516, common.scss */
+/* line 520, common.scss */
 .category_index .category_container .children.col-xs-2 li a {
   line-height: 35px;
   text-decoration: underline;
   color: #14328d;
 }
-/* line 520, common.scss */
+/* line 524, common.scss */
 .category_index .category_container .children.col-xs-2 li a:hover {
   text-decoration: none;
   color: #14328d;
 }
-/* line 526, common.scss */
+/* line 530, common.scss */
 .category_index .category_container .children.col-xs-2.long {
   width: 20%;
 }
-/* line 529, common.scss */
+/* line 533, common.scss */
 .category_index .category_container .children.col-xs-2 .more {
   font-family: "Roboto-Bold";
   font-size: 14px;
@@ -655,27 +660,27 @@ header .search #form-search .search-link.active, header .search #form-search .se
   color: #14328d;
   text-decoration: underline;
   line-height: 35px;
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') 112px -429px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') 112px -500px no-repeat;
 }
-/* line 537, common.scss */
+/* line 541, common.scss */
 .category_index .category_container .children.col-xs-2 .more:hover {
   text-decoration: none;
 }
 
-/* line 544, common.scss */
+/* line 548, common.scss */
 .about_index {
   padding-top: 40px;
   background: url("/images/about.png") no-repeat;
   height: 341px;
 }
-/* line 548, common.scss */
+/* line 552, common.scss */
 .about_index h1 {
   font-size: 24px;
   color: #fff;
   font-family: "Roboto-Medium";
   margin-bottom: 30px;
 }
-/* line 554, common.scss */
+/* line 558, common.scss */
 .about_index p {
   font-size: 14px;
   font-family: "Roboto-Light";
@@ -684,23 +689,23 @@ header .search #form-search .search-link.active, header .search #form-search .se
   margin-bottom: 20px;
 }
 
-/* line 563, common.scss */
+/* line 567, common.scss */
 .aksinterier {
   height: 170px;
 }
-/* line 565, common.scss */
+/* line 569, common.scss */
 .aksinterier .logo {
   background: url("/images/logo_aksinterier.png") no-repeat;
   line-height: 170px;
   height: 170px;
   background-position: 0 23px;
 }
-/* line 571, common.scss */
+/* line 575, common.scss */
 .aksinterier h1 {
   font-size: 30px;
   color: #322574;
 }
-/* line 575, common.scss */
+/* line 579, common.scss */
 .aksinterier a {
   width: 286px;
   height: 68px;
@@ -714,13 +719,13 @@ header .search #form-search .search-link.active, header .search #form-search .se
   padding-left: 23px;
 }
 
-/* line 588, common.scss */
+/* line 592, common.scss */
 #breadcrumbs {
   height: 84px;
   background-size: cover;
   background: url("/images/about.png") no-repeat;
 }
-/* line 592, common.scss */
+/* line 596, common.scss */
 #breadcrumbs h1 {
   font-size: 30px;
   color: #fff;
@@ -728,17 +733,17 @@ header .search #form-search .search-link.active, header .search #form-search .se
   font-family: "Roboto-Medium";
   line-height: 84px;
 }
-/* line 598, common.scss */
+/* line 602, common.scss */
 #breadcrumbs h1 a {
   color: #fff;
   padding-left: 20px;
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') -5px 32px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') -5px -39px no-repeat;
 }
-/* line 602, common.scss */
+/* line 606, common.scss */
 #breadcrumbs h1 a:hover {
   text-decoration: underline;
 }
-/* line 607, common.scss */
+/* line 611, common.scss */
 #breadcrumbs .breadcrumb {
   line-height: 84px;
   float: right;
@@ -749,52 +754,52 @@ header .search #form-search .search-link.active, header .search #form-search .se
   padding: 0;
   margin-bottom: 32px;
 }
-/* line 616, common.scss */
+/* line 620, common.scss */
 #breadcrumbs .breadcrumb a {
   color: #fff;
   text-decoration: underline;
 }
-/* line 619, common.scss */
+/* line 623, common.scss */
 #breadcrumbs .breadcrumb a:hover {
   text-decoration: none;
 }
 
-/* line 625, common.scss */
+/* line 629, common.scss */
 .catalog_index {
   margin-bottom: 40px;
 }
-/* line 627, common.scss */
+/* line 631, common.scss */
 .catalog_index .text {
   font-family: "Roboto-Light";
   color: #131313;
 }
-/* line 630, common.scss */
+/* line 634, common.scss */
 .catalog_index .text h1 {
   font-size: 24px;
   font-family: "Roboto-Medium";
   margin-bottom: 18px;
 }
-/* line 635, common.scss */
+/* line 639, common.scss */
 .catalog_index .text p {
   margin-bottom: 20px;
 }
-/* line 640, common.scss */
+/* line 644, common.scss */
 .catalog_index .col-xs-3:hover {
   text-decoration: none;
 }
-/* line 642, common.scss */
+/* line 646, common.scss */
 .catalog_index .col-xs-3:hover span {
   text-decoration: none;
 }
-/* line 646, common.scss */
+/* line 650, common.scss */
 .catalog_index .col-xs-3 a {
   width: 100%;
 }
-/* line 648, common.scss */
+/* line 652, common.scss */
 .catalog_index .col-xs-3 a:hover {
   text-decoration: none;
 }
-/* line 652, common.scss */
+/* line 656, common.scss */
 .catalog_index .col-xs-3 img {
   height: 170px;
   width: 100%;
@@ -802,7 +807,7 @@ header .search #form-search .search-link.active, header .search #form-search .se
   border-bottom: none;
   object-fit: cover;
 }
-/* line 659, common.scss */
+/* line 663, common.scss */
 .catalog_index .col-xs-3 .title {
   margin-top: -3px;
   line-height: 43px;
@@ -813,42 +818,42 @@ header .search #form-search .search-link.active, header .search #form-search .se
   text-decoration: underline;
   padding-left: 30px;
 }
-/* line 668, common.scss */
+/* line 672, common.scss */
 .catalog_index .col-xs-3 .title span {
   text-decoration: underline;
-  background: transparent url('/images/icon_motovelo-s73efb2b10e.png') 100% -180px no-repeat;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') 100% -251px no-repeat;
   padding-right: 35px;
 }
-/* line 673, common.scss */
+/* line 677, common.scss */
 .catalog_index .col-xs-3 .title:hover {
   text-decoration: none;
 }
-/* line 675, common.scss */
+/* line 679, common.scss */
 .catalog_index .col-xs-3 .title:hover span {
   text-decoration: none;
 }
-/* line 680, common.scss */
+/* line 684, common.scss */
 .catalog_index .col-xs-3 ul {
   margin-top: 5px;
   margin-bottom: 60px;
 }
-/* line 683, common.scss */
+/* line 687, common.scss */
 .catalog_index .col-xs-3 ul ul {
   margin-bottom: 10px;
 }
-/* line 686, common.scss */
+/* line 690, common.scss */
 .catalog_index .col-xs-3 ul ul li a {
   color: #141411;
   font-size: 14px;
   line-height: 20px;
   font-family: "Roboto-Light";
 }
-/* line 691, common.scss */
+/* line 695, common.scss */
 .catalog_index .col-xs-3 ul ul li a:hover {
   color: #141411;
   text-decoration: none;
 }
-/* line 700, common.scss */
+/* line 704, common.scss */
 .catalog_index .col-xs-3 li a {
   font-family: "Roboto-Light";
   font-size: 18px;
@@ -856,17 +861,21 @@ header .search #form-search .search-link.active, header .search #form-search .se
   text-decoration: underline;
   line-height: 35px;
 }
-/* line 706, common.scss */
+/* line 710, common.scss */
 .catalog_index .col-xs-3 li a:hover {
   color: #14328d;
   text-decoration: none;
 }
 
-/* line 714, common.scss */
+/* line 718, common.scss */
 .two_columns {
   background: #f5f5f5;
 }
-/* line 716, common.scss */
+/* line 720, common.scss */
+.two_columns .col-xs-3.no-left {
+  margin-bottom: 30px;
+}
+/* line 723, common.scss */
 .two_columns .left_side, .two_columns .left_contacts {
   background: #fff;
   border: 1px solid #c9c9c9;
@@ -874,11 +883,11 @@ header .search #form-search .search-link.active, header .search #form-search .se
   padding-right: 0;
   margin-bottom: 30px;
 }
-/* line 722, common.scss */
+/* line 729, common.scss */
 .two_columns .left_side ul, .two_columns .left_contacts ul {
   padding-bottom: 15px;
 }
-/* line 725, common.scss */
+/* line 732, common.scss */
 .two_columns .left_side ul li a, .two_columns .left_contacts ul li a {
   color: #8b8b8b;
   font-size: 16px;
@@ -888,14 +897,60 @@ header .search #form-search .search-link.active, header .search #form-search .se
   padding-right: 0;
   border-bottom: 3px solid transparent;
 }
-/* line 733, common.scss */
+/* line 740, common.scss */
 .two_columns .left_side ul li a:hover, .two_columns .left_side ul li a:focus, .two_columns .left_side ul li a:active, .two_columns .left_contacts ul li a:hover, .two_columns .left_contacts ul li a:focus, .two_columns .left_contacts ul li a:active {
   background: none;
   color: #1c3e97;
   border-bottom: 3px solid #1c3e97;
 }
+/* line 747, common.scss */
+.two_columns .left_side ul li.active a, .two_columns .left_contacts ul li.active a {
+  background: none;
+  color: #1c3e97;
+  border-bottom: 3px solid #1c3e97;
+}
+/* line 757, common.scss */
+.two_columns .left_contacts .phone {
+  padding-top: 12px;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') 15px -564px no-repeat;
+}
+/* line 760, common.scss */
+.two_columns .left_contacts .phone i {
+  font-size: 18px;
+  font-family: "Roboto-Regular";
+  padding-left: 40px;
+}
+/* line 765, common.scss */
+.two_columns .left_contacts .phone span {
+  font-family: "Roboto-Bold";
+  color: #1c3e97;
+  font-size: 22px;
+  padding-left: 23px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+/* line 774, common.scss */
+.two_columns .left_contacts .address {
+  padding-top: 12px;
+  background: transparent url('/images/icon_motovelo-s8d959c49ad.png') 14px 7px no-repeat;
+}
+/* line 777, common.scss */
+.two_columns .left_contacts .address i {
+  font-size: 18px;
+  font-family: "Roboto-Regular";
+  padding-left: 40px;
+}
+/* line 782, common.scss */
+.two_columns .left_contacts .address span {
+  font-family: "Roboto-Regular";
+  margin-bottom: 30px;
+  color: #393126;
+  font-size: 16px;
+  padding-left: 23px;
+  padding-top: 20px;
+}
 
-/* line 743, common.scss */
+/* line 793, common.scss */
 .caption.cat-categories {
   font-size: 16px;
   font-family: "Roboto-Bold";
@@ -905,10 +960,320 @@ header .search #form-search .search-link.active, header .search #form-search .se
   margin-bottom: 15px;
 }
 
-/* line 751, common.scss */
+/* line 801, common.scss */
 .page_title {
+  margin-bottom: 35px;
   font-size: 24px;
   color: #3c3c3c;
   border-bottom: 1px solid #bababa;
   padding-bottom: 15px;
+}
+/* line 807, common.scss */
+.page_title .count {
+  font-size: 16px;
+  color: #b8b8b8;
+  font-family: "Roboto-Regular";
+  margin-left: 7px;
+}
+
+/* line 815, common.scss */
+#products-list .pagination {
+  margin-top: 5px;
+}
+/* line 817, common.scss */
+#products-list .pagination .first_page, #products-list .pagination .prev_page, #products-list .pagination .last_page, #products-list .pagination .next_page {
+  width: 100%;
+  height: 100%;
+}
+/* line 821, common.scss */
+#products-list .pagination .first_page {
+  background: url("/images/paging_first.png") no-repeat 15px 13px;
+}
+/* line 823, common.scss */
+#products-list .pagination .first_page:hover, #products-list .pagination .first_page:focus, #products-list .pagination .first_page:active {
+  background-position: 15px -21px;
+}
+/* line 827, common.scss */
+#products-list .pagination .prev_page {
+  background: url("/images/paging_prev.png") no-repeat 18px 13px;
+}
+/* line 829, common.scss */
+#products-list .pagination .prev_page:hover, #products-list .pagination .prev_page:focus, #products-list .pagination .prev_page:active {
+  background-position: 18px -21px;
+}
+/* line 833, common.scss */
+#products-list .pagination .last_page {
+  background: url("/images/paging_first.png") no-repeat 14px 12px;
+  transform: rotate(180deg);
+}
+/* line 836, common.scss */
+#products-list .pagination .last_page:hover, #products-list .pagination .last_page:focus, #products-list .pagination .last_page:active {
+  background-position: 14px -22px;
+}
+/* line 840, common.scss */
+#products-list .pagination .next_page {
+  background: url("/images/paging_prev.png") no-repeat 17px 12px;
+  transform: rotate(180deg);
+}
+/* line 843, common.scss */
+#products-list .pagination .next_page:hover, #products-list .pagination .next_page:focus, #products-list .pagination .next_page:active {
+  background-position: 17px -22px;
+}
+/* line 848, common.scss */
+#products-list .pagination li a {
+  height: 42px;
+  padding: 0;
+  width: 46px;
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  font-family: "Roboto-Light";
+  font-size: 19px;
+  color: #1c3e97;
+  text-align: center;
+  line-height: 40px;
+}
+/* line 859, common.scss */
+#products-list .pagination li a:hover, #products-list .pagination li a:focus, #products-list .pagination li a:active {
+  background-color: #1c3e97;
+  border: 1px solid #1c3e97;
+  color: #fff;
+}
+/* line 866, common.scss */
+#products-list .pagination li.active a {
+  background-color: #1c3e97;
+  border: 1px solid #1c3e97;
+  color: #fff;
+}
+/* line 870, common.scss */
+#products-list .pagination li.active a:hover, #products-list .pagination li.active a:focus, #products-list .pagination li.active a:active {
+  background-color: #1c3e97;
+  border: 1px solid #1c3e97;
+  color: #fff;
+}
+/* line 879, common.scss */
+#products-list .one-product {
+  margin-bottom: 30px;
+  background-color: #fff;
+  background-clip: content-box;
+  position: relative;
+  height: 246px;
+}
+/* line 885, common.scss */
+#products-list .one-product .inner {
+  border: 1px solid #c9c9c9;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: .2s;
+  overflow: hidden;
+  z-index: 1000;
+}
+/* line 893, common.scss */
+#products-list .one-product .inner > a {
+  width: 100%;
+}
+/* line 895, common.scss */
+#products-list .one-product .inner > a > img {
+  margin-bottom: 12px;
+  width: 100%;
+  height: 156px;
+  object-fit: contain;
+}
+/* line 902, common.scss */
+#products-list .one-product .inner:hover {
+  z-index: 9999;
+  transition: .2s;
+  height: 334px;
+}
+/* line 908, common.scss */
+#products-list .one-product a.hidden_link {
+  text-decoration: underline;
+  background-color: #fff;
+  line-height: 42px;
+  width: 100%;
+  border-top: 1px solid #d1d1d1;
+  font-family: "Roboto-Medium";
+  color: #1c3e97;
+  padding-left: 15px;
+  transition: .2s;
+  position: relative;
+  z-index: 9999;
+}
+/* line 920, common.scss */
+#products-list .one-product a.hidden_link:hover {
+  text-decoration: none;
+}
+/* line 925, common.scss */
+#products-list .one-product:hover .title {
+  text-decoration: none;
+}
+/* line 928, common.scss */
+#products-list .one-product:hover .inner {
+  box-shadow: 0px 0px 8px 2px #c9c9c9;
+}
+/* line 932, common.scss */
+#products-list .one-product .title {
+  padding-left: 18px;
+  padding-right: 18px;
+  overflow: hidden;
+  line-height: 20px;
+  height: 40px;
+  font-size: 14px;
+  color: #1c3e97;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+/* line 944, common.scss */
+#products-list .price-group {
+  padding-bottom: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 14px;
+  color: #000;
+}
+/* line 950, common.scss */
+#products-list .price-group .price {
+  float: left;
+  margin-right: 8px;
+  font-family: "Roboto-Bold";
+}
+/* line 954, common.scss */
+#products-list .price-group .price span {
+  font-family: "Roboto-Regular";
+}
+/* line 958, common.scss */
+#products-list .price-group .price-old {
+  float: left;
+  font-family: "Roboto-Light";
+  text-decoration: line-through;
+}
+/* line 962, common.scss */
+#products-list .price-group .price-old span {
+  text-decoration: line-through;
+}
+
+/* line 968, common.scss */
+.action {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+/* line 976, common.scss */
+.action .sale {
+  width: 69px;
+  background-color: #da2020;
+  float: right;
+}
+/* line 981, common.scss */
+.action .new {
+  width: 69px;
+  background-color: #0c9112;
+  float: left;
+}
+
+/* line 987, common.scss */
+.product {
+  padding-bottom: 40px;
+}
+/* line 989, common.scss */
+.product .rg-image-wrapper {
+  border: none;
+  padding: 0;
+  height: 345px;
+  margin-bottom: 5px;
+}
+/* line 994, common.scss */
+.product .rg-image-wrapper .rg-image {
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+}
+/* line 998, common.scss */
+.product .rg-image-wrapper .rg-image a {
+  height: 100%;
+}
+/* line 1001, common.scss */
+.product .rg-image-wrapper .rg-image img {
+  padding: 0;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+/* line 1009, common.scss */
+.product .fa.fa-search-plus {
+  display: none;
+}
+/* line 1012, common.scss */
+.product .es-carousel {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 1015, common.scss */
+.product .es-carousel li {
+  height: 90px;
+}
+/* line 1019, common.scss */
+.product .sale, .product .new {
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  width: 69px;
+  height: 20px;
+  font-family: "Roboto-Regular";
+  padding-top: 4px;
+}
+/* line 1030, common.scss */
+.product .sale {
+  background-color: #da2020;
+  left: 100%;
+  margin-left: -84px;
+}
+/* line 1035, common.scss */
+.product .new {
+  background-color: #0c9112;
+}
+/* line 1038, common.scss */
+.product .price {
+  font-family: "Roboto-Bold";
+  font-size: 22px;
+  color: #000;
+  float: left;
+  margin-right: 10px;
+}
+/* line 1045, common.scss */
+.product .price-old {
+  font-size: 16px;
+  font-family: "Roboto-Light";
+  color: #000;
+  text-decoration: line-through;
+  float: left;
+  padding-top: 4px;
+}
+/* line 1052, common.scss */
+.product .price-old span {
+  text-decoration: line-through;
+}
+/* line 1056, common.scss */
+.product .text {
+  margin-right: -15px;
+}
+/* line 1058, common.scss */
+.product .text h1 {
+  color: #171717;
+  font-family: "Roboto-Medium";
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 1064, common.scss */
+.product .text p {
+  font-size: 14px;
+  font-family: "Roboto-Light";
+  color: #131313;
+  margin-bottom: 20px;
 }

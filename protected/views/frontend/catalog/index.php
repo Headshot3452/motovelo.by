@@ -61,28 +61,6 @@
                     <?php echo $this->text ;?>
                 </div>
             </div>
-
-<!--//                            foreach ($categories as $key => $item)-->
-<!--//                            {-->
-<!--//                                $link = $this->createUrl('catalog/tree', array('url' => $url . $item->name));-->
-<!--//                                echo-->
-<!--//                                    '<div class="row col-md-12">-->
-<!--//                                        <div class="item col-md-12">-->
-<!--//                                            '. CHtml::link('<b>'.$item->title.'</b>', $item->name).'-->
-<!--//                                        </div>';-->
-<!--//-->
-<!--//                                        foreach ($item->children()->active()->findAll() as $subitem)-->
-<!--//                                        {-->
-<!--//                                            echo '<div class="subitem col-md-4">'.CHtml::link($subitem->title, array('catalog/tree', 'url' => $item->name.'/'.$subitem->name)) . '</div>';-->
-<!--//                                        }-->
-<!--//                                    echo-->
-<!--//                                        '<div class="clearfix"></div>-->
-<!--//                                    </div>';-->
-<!--//                            }-->
-<!--//                    echo-->
-<!--//                        '</div>';-->
-<!--            }-->
-
         </div>
     </div>
 </div>
