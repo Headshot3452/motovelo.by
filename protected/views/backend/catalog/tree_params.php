@@ -181,7 +181,7 @@
         $('body').on('click', '.del-form', function()
         {
             viewSubmitButton(this);
-            $(this).closest('.item').parent().remove();
+            $(this).closest('.item').remove();
         });
 
         $('body').on('change', 'select[id$=type]', function()

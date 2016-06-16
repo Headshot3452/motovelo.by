@@ -21,7 +21,10 @@
                                 echo CHtml::openTag('ul');
                                 foreach($children as $k => $v)
                                 {
-                                    echo '<li><a href="">' . $v->title . '</a></li>';
+                                    echo
+                                    '<li>
+                                        <a href="'.$this->createUrl('catalog/tree', array('url' => $value->name.'/'.$v->name)).'">' . $v->title . '</a>
+                                    </li>';
 
                                     $sub_children = $v->children()->active()->findAll();
 
@@ -37,7 +40,10 @@
                                                 echo CHtml::openTag('ul', array('class' => 'col-xs-6'));
                                             }
 
-                                            echo '<li><a href="">' . $_v->title . '</a></li>';
+                                            echo
+                                            '<li>
+                                                <a href="'.$this->createUrl('catalog/tree', array('url' => $value->name.'/'.$v->name.'/'.$_v->name)).'">' . $_v->title . '</a>
+                                            </li>';
 
                                             if($_k == 4)
                                             {

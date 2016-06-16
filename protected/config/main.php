@@ -94,7 +94,7 @@
                     ),
                     'elasticgallery' => array(
                         'basePath'=>'webroot.js.ResponsiveImageGallery',
-                        'js'=>array('js/jquery.tmpl.min.js','js/jquery.easing.1.3.js','js/jquery.elastislide.js','js/gallery.js'),
+                        'js'=>array('js/jquery.tmpl.min.js', 'js/jquery.easing.1.3.js', 'js/jquery.elastislide.js', 'js/gallery.js'),
                         'css'=>array('css/elastislide.css', 'css/style.css'),
                         'depends'=>array('jquery'),
                     ),

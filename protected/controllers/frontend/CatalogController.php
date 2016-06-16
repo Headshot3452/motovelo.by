@@ -28,64 +28,6 @@
 
         }
 
-        public function actionSearch($term)
-        {
-            $this->setPageTitle("Поиск");
-
-            $words = explode(' ', $term);
-
-            $criteria = new CDbCriteria;
-
-            if (!empty($words))
-            {
-                $count = count($words);
-                for ($i = 0; $i < $count; $i++)
-                {
-                    $criteria->addSearchCondition('title', $words[$i]);
-                }
-            }
-
-            $criteria->scopes = array(
-                'language' => array($this->getCurrentLanguage()->id),
-                'active',
-            );
-
-            $model = new CatalogProducts();
-
-            if (Yii::app()->request->isAjaxRequest)
-            {
-                $criteria->limit = 5;
-
-                $links = $model::model()->findAll($criteria);
-
-                $result = array();
-                foreach ($links as $link)
-                {
-                    $image = $link->getOneFile('small');
-
-                    $result[] = array(
-                        'url' => $this->createUrl('catalog/tree', array('url' => $link->getUrlForItem($this->root_id))),
-                        'src' => ($image) ? $image : Yii::app()->params['noimage'],
-                        'label' => $link->title,  // label for dropdown list
-                        'value' => $term,  // value for input field
-                        'id' => $link->id,        // return value from autocomplete
-                    );
-                }
-
-                echo CJSON::encode($result);
-                Yii::app()->end();
-            }
-
-            $products = new CActiveDataProvider($model,
-                array(
-                    'criteria' => $criteria,
-                    'pagination' => array(),
-                )
-            );
-
-            $this->render('tree', array('children' => array(), 'dataProducts' => $products, 'category' => array()));
-        }
-
         public function actionTree($url)
         {
             $pages = explode('/', $url);

@@ -1,14 +1,15 @@
 <div class="" style="padding: 0 15px; margin: 0 -10px">
-<div class="type_slider">
-
+	<div class="type_slider">
 <?php
 	foreach ($this->_data as $item)
 	{
 		$image = $item->getOneFile('medium');
 
+		$url = $item->getUrlForItem($item->parent->root);
+
 		echo
 		'<div class="item">
-			<a href="">
+			<a href="'.$this->controller->createUrl('catalog/tree', array('url' => $url)).'">
 				<div class="inner">
 					<img src="'.$image.'" alt="'.$item->title.'">
 					<div class="title">'.$item->title.'</div>
@@ -41,5 +42,5 @@
 
 	$cs->registerScript("type_slider", $type_slider);
 ?>
-</div>
+	</div>
 </div>

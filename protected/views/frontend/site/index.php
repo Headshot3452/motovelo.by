@@ -7,7 +7,6 @@
                 'items' => array(
                     array(
                         'label' => 'Популярные товары',
-                        'id' => 'tab-details',
                         'active' => true,
                         'content' => '[[w:CarouselProductsWidget|type=popular;view=index;]]'
                     ),
@@ -38,6 +37,8 @@
             $title = isset($title_array[2]) ? 'Запчасти на <span>'.$title_array[2].'</span>' : '<span>'.$title_array[0].'</span>';
             $image = $value->getOneFile('original');
 
+            $url_lv1 = $value->name;
+
             $close = 0;
 
             $children = $value->children()->active()->findAll();
@@ -67,11 +68,11 @@
 
                                 if($k == 11)
                                 {
-                                    echo '<a href="" class="more">Показать больше</a>';
+                                    echo '<a href="'.$this->createUrl('catalog/tree', array('url' => $url_lv1)).'" class="more">Показать больше</a>';
                                 }
                                 else
                                 {
-                                    echo '<li><a href="">'.$v->title.'</a></li>';
+                                    echo '<li><a href="'.$this->createUrl('catalog/tree', array('url' => $url_lv1.'/'.$v->name)).'">'.$v->title.'</a></li>';
                                 }
 
                                 if(($k + 1) % 4 == 0)

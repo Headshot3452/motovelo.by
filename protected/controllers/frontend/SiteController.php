@@ -22,6 +22,40 @@
             $this->render('index', array('category' => $category));
         }
 
+        public function actionSearch($term)
+        {
+            $this->setPageForUrl(Yii::app()->request->getPathInfo());
+
+            $words = explode(' ', $term);
+
+            $criteria = new CDbCriteria;
+
+            if (!empty($words))
+            {
+                $count = count($words);
+                for ($i = 0; $i < $count; $i++)
+                {
+                    $criteria->addSearchCondition('title', $words[$i]);
+                }
+            }
+
+            $criteria->scopes = array(
+                'language' => array($this->getCurrentLanguage()->id),
+                'active',
+            );
+
+            $model = new CatalogProducts();
+
+            $products = new CActiveDataProvider($model,
+                array(
+                    'criteria' => $criteria,
+                    'pagination' => array(),
+                )
+            );
+
+            $this->render('search', array('children' => array(), 'dataProducts' => $products));
+        }
+
         public function actionContacts()
         {
             $this->setPageForUrl(Yii::app()->request->getPathInfo());
@@ -70,6 +104,21 @@
             }
 
             $this->render('contacts',array('model'=>$model, 'adresses'=>$adresses, 'settings'=>$settings, 'phones' => $phones));
+        }
+
+        public function actionApplication()
+        {
+            if (isset($_POST['ApplicationForm']))
+            {
+                $model = new ApplicationForm();
+                $model->attributes = $_POST['ApplicationForm'];
+                if ($model->validate())
+                {
+//                    $bodyEmail = $this->renderEmail('contacts', array('model' => $model));
+//                    $mail = Yii::app()->mailer->isHtml(true)->setFrom($model->email);
+//                    $mail->send($this->settings->email, 'Subject', $bodyEmail);
+                }
+            }
         }
 
         public function actionPage($url)

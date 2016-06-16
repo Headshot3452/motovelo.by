@@ -10,7 +10,7 @@
 			echo
 			'<div class="item">
 				<img src="'.$image.'" alt="'.$item->title.'" class="">
-				<a href="" class="stock opacity">Акции</a>
+				<a href="'.$this->controller->getUrlById(Yii::app()->params['akcii_page']).'" class="stock opacity">Акции</a>
 				'. $link .'
 			</div>';
 		}

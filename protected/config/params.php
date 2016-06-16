@@ -33,6 +33,7 @@
     ),
 
     'catalog_page' => 7,
+    'akcii_page' => 4,
 
     'noavatar' => 'images/noavatar.png',
     'noimage'  => 'images/noimage.png',
