@@ -9,6 +9,7 @@
                 <div class="col-xs-2 no-right pull-right">
                     Добавляйтесь <br/>
                     в друзья
+                    <span class="vk"><a href = "<?php echo $this->settings['vk'] ;?>" target="_blank"></a></span>
                 </div>
             </div>
         </div>

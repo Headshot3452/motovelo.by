@@ -9,12 +9,12 @@
         <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->phone; ?></div></td>
     </tr>
     <tr>
-        <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('subject'); ?></td>
-        <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->subject; ?></div></td>
+        <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('email'); ?></td>
+        <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->email; ?></div></td>
     </tr>
     <tr>
-        <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('message'); ?></td>
-        <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->message; ?></div></td>
+        <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('text'); ?></td>
+        <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->text; ?></div></td>
     </tr>
     </tbody>
 </table>

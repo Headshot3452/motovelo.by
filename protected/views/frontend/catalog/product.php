@@ -21,7 +21,10 @@
 
     $price = ($sale != $product->price && $sale != 0) ? $sale : number_format($product->price, 0, '.', ' ');
 
-    $parameters = $product->parameters;
+//    $parameters = $product->parameters;
+//    $parameters_value = $product->parameters_value;
+
+    $params = $product->params;
 
     $address =
         '<div class="product_contacts">
@@ -125,12 +128,13 @@
                                             </div>
                                             <div class="parameters col-xs-12">
 <?php
-                                                foreach($parameters as $value)
+                                                foreach($params as $value)
                                                 {
+                                                    $value_param = CatalogProductsParams::model()->findByAttributes(array('product_id' => $product->id, 'params_id' => $value->id));
                                                     echo
                                                     '<div class="item">
-                                                        <span class="title">'. $value->params->title .': </span>
-                                                        <span class="value">'. $value->value->value .'</span>
+                                                        <span class="title">'. $value->title .': </span>
+                                                        <span class="value">'. $value_param->value->value .'</span>
                                                     </div>';
                                                 }
 ?>

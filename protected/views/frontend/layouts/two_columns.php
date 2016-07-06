@@ -16,13 +16,13 @@
 
 		if($lv_4)
 		{
-			$link = CHtml::link($this->pageTitle, $lv_3);
+			$link = CHtml::link('Назад', $lv_3);
 		}
 		else
 		{
 			if($lv_3 && !is_array($lv_3))
 			{
-				$link = CHtml::link($this->pageTitle, $lv_2);
+				$link = CHtml::link('Назад', $lv_2);
 			}
 			elseif($lv_3 && is_array($lv_3))
 			{

@@ -12,9 +12,8 @@
     $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->price, 0, '.', ' ');
 ?>
 <div class="one-product col-xs-4 view-row border-bottom">
-
-        <div class="inner">
-            <a href="<?php echo $link ?>">
+    <div class="inner">
+        <a href="<?php echo $link ?>">
             <img align="top" src="/<?php echo $image; ?>" class="border">
             <div class="title">
                 <?php echo $data->title ;?>
@@ -52,11 +51,11 @@
                 }
             echo
             '</div>
-            <a href="" class="hidden_link">Где купить?</a>
+
+            <a href="" class="how_to_order hidden_link">Где купить?</a>
             <a href="" class="hidden_link">Оставить заявку</a>';
 ?>
-            </a>
-            <div class="clearfix"></div>
-        </div>
-
+        </a>
+        <div class="clearfix"></div>
+    </div>
 </div>

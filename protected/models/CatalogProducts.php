@@ -83,7 +83,8 @@
             return array(
                 'parent'              => array(self::BELONGS_TO, 'CatalogTree', 'parent_id'),
                 'parameters'          => array(self::HAS_MANY, 'CatalogProductsParams', 'product_id'),
-                'parameters_value'    => array(self::HAS_MANY, 'CatalogParamsVal', array('value_id'=>'id'),  'through' => 'parameters'),
+                'params'              => array(self::HAS_MANY, 'CatalogParams', array('params_id' => 'id'), 'through' => 'parameters', 'order' => 'params.sort'),
+                'parameters_value'    => array(self::HAS_MANY, 'CatalogParamsVal', array('value_id'=>'id'), 'through' => 'parameters', 'order' => 'parameters_value.sort'),
                 'language'            => array(self::BELONGS_TO, 'Language', 'language_id'),
                 'parameters_uniq'     => array(self::HAS_MANY, 'CatalogProductsParams', 'product_id', 'group' => 'parameters_uniq.`params_id`'),
                 'orderItems'          => array(self::HAS_MANY, 'OrderItems', 'product_id'),
@@ -293,10 +294,7 @@
                 'active'
             );
 
-            if ($order)
-            {
-                $criteria->order = $order;
-            }
+            $criteria->order = 'sort';
 
             return new CActiveDataProvider($this,
                 array(

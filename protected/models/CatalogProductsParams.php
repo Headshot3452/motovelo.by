@@ -50,7 +50,7 @@ class CatalogProductsParams extends Model
 		return array(
 			'value' => array(self::BELONGS_TO, 'CatalogParamsVal', 'value_id'),
 			'product' => array(self::BELONGS_TO, 'CatalogProducts', 'product_id'),
-			'params' => array(self::BELONGS_TO, 'CatalogParams', 'params_id'),
+			'params' => array(self::BELONGS_TO, 'CatalogParams', 'params_id', 'order' => 'sort'),
 		);
 	}
 

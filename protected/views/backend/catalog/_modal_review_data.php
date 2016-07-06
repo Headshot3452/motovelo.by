@@ -61,11 +61,11 @@
         <div class="col-xs-8 review-edit">';
 
             $form_review = $this->beginWidget('BsActiveForm',
-            array(
-            'id' => 'catalog-products-review-form',
-            'enableAjaxValidation' => false,
-            'action' => $this->createUrl('/reviews_save')
-            )
+                array(
+                    'id' => 'catalog-products-review-form',
+                    'enableAjaxValidation' => false,
+                    'action' => $this->createUrl('/reviews_save')
+                )
             );
 
             echo $form_review->hiddenField($model, 'id');

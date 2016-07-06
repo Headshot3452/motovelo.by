@@ -2,7 +2,7 @@
 return array(
     'urlManager'=>array(
         ""=>"site/index",
-        "contacts"=>"site/contacts",
+        "contacts"=>"feedback/contacts",
         "application"=>"site/application",
         "userlogin"=>"client/loginUser",
         "cart"=>"site/cart",

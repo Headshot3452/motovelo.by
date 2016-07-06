@@ -14,7 +14,7 @@
 					<img src="'.$image.'" alt="'.$item->title.'">
 					<div class="title">'.$item->title.'</div>
 					<span class="price">'.Yii::app()->format->formatNumber($item->price).'</span>
-					<a href="" class="hidden_link">Где купить?</a>
+					<a href="" class="hidden_link how_to_order">Где купить?</a>
 					<a href="" class="hidden_link">Оставить заявку</a>
 				</div>
 			</a>

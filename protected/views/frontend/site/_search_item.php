@@ -52,7 +52,7 @@ $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->pr
 			}
 			echo
 			'</div>
-            <a href="" class="hidden_link">Где купить?</a>
+            <a href="" class="hidden_link how_to_order">Где купить?</a>
             <a href="" class="hidden_link">Оставить заявку</a>';
 			?>
 		</a>

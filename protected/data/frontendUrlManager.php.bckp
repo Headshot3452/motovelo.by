@@ -38242,3 +38242,299 @@ url = createurl(catalog/index, params)
 ?>
 
 
+17.06.2016 08:40:46
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+17.06.2016 09:59:24
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 21:28:25
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 21:29:08
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:48:44
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:48:49
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:48:54
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:48:56
+<?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:49:01
+<?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:49:02
+<?php return array(
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:49:04
+<?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:49:06
+<?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+
+05.07.2016 22:49:11
+<?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
+"kontakty/" => "site/contacts",
+"katalog/" => "catalog/index",
+"katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
+"" => "site/index",
+"contacts" => "site/contacts",
+"application" => "site/application",
+"userlogin" => "client/loginUser",
+"cart" => "site/cart",
+"cartinfo" => "site/cartinfo",
+"search" => "site/search",
+"<_c:(profile|user|client|profileblog)>" => "<_c>/index",
+"<_c:(profile|user|client|profileblog)>/<_a>" => "<_c>/<_a>",
+"<_a:(login|logout|register)>" => "user/<_a>",
+"<_c>/<_a:(captcha)>/refresh" => "<_c>/<_a>",
+"<_c>/<_a:(captcha)>/<v>" => "<_c>/<_a>",
+"<url:([0-9a-z\/_-]+)>/" => "site/page",
+);
+?>
+
+

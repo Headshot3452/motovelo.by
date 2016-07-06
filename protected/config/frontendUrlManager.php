@@ -1,9 +1,11 @@
 <?php return array(
+"akcii/" => "news/list",
+"akcii/<name:([\w-]+)>/" => "news/item",
 "kontakty/" => "site/contacts",
 "katalog/" => "catalog/index",
 "katalog/<url:([0-9a-z\/_-]+)>/" => "catalog/tree",
 "" => "site/index",
-"contacts" => "site/contacts",
+"contacts"=>"feedback/contacts",
 "application" => "site/application",
 "userlogin" => "client/loginUser",
 "cart" => "site/cart",

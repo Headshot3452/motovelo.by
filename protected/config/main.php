@@ -11,7 +11,7 @@
         'language' => 'ru',
         'charset' => 'utf-8',
 //         preloading 'log' component
-         'preload' => array('log', 'debug'),
+//         'preload' => array('log', 'debug'),
 
         // autoloading model and component classes
 

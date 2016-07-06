@@ -55,20 +55,25 @@
 
                         if($children)
                         {
+                            $sub_close = 0;
                             foreach($children as $k => $v)
                             {
-                                if($k == 0 || $k % 4 == 0)
+                                $sub_children = $v->children()->active()->findAll();
+                                if($k == 0 || $k % 4 == 0 || $sub_close)
                                 {
+                                    $col = $sub_children ? 'col-xs-3 ' : 'col-xs-2 ';
+
                                     $left = ($k == 0) ? "no-left" : "";
                                     $right = ($k == 8) ? "no-right long" : "";
 
-                                    echo CHtml::openTag('ul', array('class' => 'children col-xs-2 '.$left.$right));
+                                    echo CHtml::openTag('ul', array('class' => 'children '.$col . $left . $right));
                                     $close = 0;
                                 }
 
                                 if($k == 11)
                                 {
                                     echo '<a href="'.$this->createUrl('catalog/tree', array('url' => $url_lv1)).'" class="more">Показать больше</a>';
+                                    break;
                                 }
                                 else
                                 {
@@ -80,8 +85,56 @@
                                     echo CHtml::closeTag('ul');
                                     $close = 1;
                                 }
+
+                                if($sub_children)
+                                {
+                                    $sub_left = ($k == 0 || $sub_close) ? "no-all" : "";
+
+                                    echo
+                                    CHtml::openTag("ul", array("class" => "col-xs-12 ".$sub_left));
+
+                                    foreach($sub_children as $_k => $_v)
+                                    {
+                                        $_sub_left = ($_k == 0) ? "no-left" : "no-all";
+
+                                        if($_k == 0 || $_k == 5)
+                                        {
+                                            echo CHtml::openTag("ul", array("class" => "col-xs-6 ".$_sub_left));
+                                            $close = 0;
+                                        }
+
+                                        if($_k == 9)
+                                        {
+                                            echo '<a href="'.$this->createUrl('catalog/tree', array('url' => $url_lv1)).'" class="more">Показать больше</a>';
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            echo
+                                            '<li>
+                                                <a href="' . $this->createUrl('catalog/tree', array('url' => $value->name . '/' . $v->name . '/' . $_v->name)) . '">' . $_v->title . '</a>
+                                            </li>';
+                                        }
+
+                                        if($_k == 4)
+                                        {
+                                            echo CHtml::closeTag('ul');
+                                            $close = 1;
+                                        }
+                                        $sub_close = 1;
+                                    }
+
+                                    echo
+                                    CHtml::closeTag("ul").
+                                    CHtml::closeTag("ul");
+
+                                    if(!$close)
+                                    {
+                                        echo CHtml::closeTag('ul');
+                                    }
+                                }
                             }
-                            if(!$close)
+                            if(!$close || !$sub_close)
                             {
                                 echo CHtml::closeTag('ul');
                             }

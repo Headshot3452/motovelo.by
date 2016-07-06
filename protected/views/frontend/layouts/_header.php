@@ -111,7 +111,7 @@
 <?php
                     $search = Yii::app()->request->getQuery('term');
 
-                    echo CHtml::beginForm(array('search'), 'get', array('id' => 'form-search'));
+                    echo CHtml::beginForm(array('/search'), 'get', array('id' => 'form-search'));
                     echo CHtml::textField('term', $search, array('class' => 'hid', 'placeholder' => 'Я ищу...'));
                     echo CHtml::linkButton('Поиск', array('class' => 'search-link'));
                     echo CHtml::endForm();
@@ -121,8 +121,9 @@
             </div>
         </div>
     </header>
-
 <?php
+    $this->renderFile(Yii::getPathOfAlias('application.views.frontend.layouts') . DIRECTORY_SEPARATOR . '_modal.php', array());
+
     $cs = Yii::app()->getClientScript();
 
     $header_script =
@@ -149,6 +150,12 @@
         {
             $(this).toggleClass("open");
             $("#drop_catalog").slideToggle("slow");
+        });
+
+        $(".how_to_order").on("click", function()
+        {
+            $("#how_to_order").modal();
+            return false;
         });
     ';
 
