@@ -21,9 +21,6 @@
 
     $price = ($sale != $product->price && $sale != 0) ? $sale : number_format($product->price, 0, '.', ' ');
 
-//    $parameters = $product->parameters;
-//    $parameters_value = $product->parameters_value;
-
     $params = $product->params;
 
     $address =
@@ -119,7 +116,7 @@
                                                             array(
                                                                 'label' => 'Оставить заявку',
                                                                 'active' => false,
-                                                                'content' => $this->renderPartial('_application_form', '', true)
+                                                                'content' => $this->renderPartial('_application_form', array('product' => $product, 'price' => $price), true)
                                                             ),
                                                         ),
                                                     )

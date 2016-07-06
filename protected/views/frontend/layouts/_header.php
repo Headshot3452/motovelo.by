@@ -157,6 +157,19 @@
             $("#how_to_order").modal();
             return false;
         });
+
+        $(".submit_your_application").on("click", function()
+        {
+            var p = $(this).data();
+
+            $("#submit_your_application .title_product").text(p.title);
+            $("#submit_your_application #OrdersForm_id").val(p.id);
+            $("#submit_your_application #OrdersForm_title").val(p.title);
+            $("#submit_your_application #OrdersForm_price").val(p.price);
+
+            $("#submit_your_application").modal();
+            return false;
+        });
     ';
 
     $cs->registerScript('header_script', $header_script);

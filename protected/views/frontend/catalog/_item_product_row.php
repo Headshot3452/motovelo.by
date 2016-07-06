@@ -53,7 +53,12 @@
             '</div>
 
             <a href="" class="how_to_order hidden_link">Где купить?</a>
-            <a href="" class="hidden_link">Оставить заявку</a>';
+            <a href="" class="hidden_link submit_your_application"
+                data-price="'.$price.'"
+                data-title="'.$data->title.'"
+                data-id="'.$data->id.'">
+                Оставить заявку
+            </a>';
 ?>
         </a>
         <div class="clearfix"></div>

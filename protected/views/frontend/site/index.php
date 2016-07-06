@@ -170,7 +170,7 @@
                 </span>
             </div>
             <div class="col-xs-4 text-right no-right">
-                <a href = "" class="opacity">Перейти к сайту</a>
+                <a href = "http://aks-potolok.by/" class="opacity">Перейти к сайту</a>
             </div>
         </div>
     </div>

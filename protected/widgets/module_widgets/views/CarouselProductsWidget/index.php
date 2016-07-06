@@ -7,15 +7,23 @@
 
 		$url = $item->getUrlForItem($item->parent->root);
 
+		$sale = CatalogProducts::model()->getSalePrice($item->price, $item->sale_info, 0);
+		$price = ($sale != $item->price && $sale != 0) ? $sale : number_format($item->price, 0, '.', ' ');
+
 		echo
 		'<div class="item">
 			<a href="'.$this->controller->createUrl('catalog/tree', array('url' => $url)).'">
 				<div class="inner">
 					<img src="'.$image.'" alt="'.$item->title.'">
 					<div class="title">'.$item->title.'</div>
-					<span class="price">'.Yii::app()->format->formatNumber($item->price).'</span>
+					<span class="price">'.$price.'</span>
 					<a href="" class="hidden_link how_to_order">Где купить?</a>
-					<a href="" class="hidden_link">Оставить заявку</a>
+					<a href="" class="hidden_link submit_your_application"
+		                data-price="'.$price.'"
+		                data-title="'.$item->title.'"
+		                data-id="'.$item->id.'">
+		                Оставить заявку
+		            </a>
 				</div>
 			</a>
 		</div>';

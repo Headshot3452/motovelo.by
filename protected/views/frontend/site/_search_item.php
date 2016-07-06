@@ -1,15 +1,16 @@
 <?php
-$link = $this->createUrl('catalog/tree', array('url' => $data->getUrlForItem($data->parent->root)));
+	$link = $this->createUrl('catalog/tree', array('url' => $data->getUrlForItem($data->parent->root)));
 
-$image = $data->getOneFile('medium');
-$sale_type = '';
-if (!$image or !file_exists($image))
-{
-	$image = Yii::app()->params['noimage'];
-}
+	$image = $data->getOneFile('medium');
+	$sale_type = '';
 
-$sale = CatalogProducts::model()->getSalePrice($data->price, $data->sale_info, 0);
-$price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->price, 0, '.', ' ');
+	if (!$image or !file_exists($image))
+	{
+		$image = Yii::app()->params['noimage'];
+	}
+
+	$sale = CatalogProducts::model()->getSalePrice($data->price, $data->sale_info, 0);
+	$price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->price, 0, '.', ' ');
 ?>
 <div class="one-product col-xs-3 view-row border-bottom">
 
@@ -26,7 +27,7 @@ $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->pr
 					</b>
 					<span class="currency">руб</span>
 				</div>
-				<?php
+<?php
 				if ($sale)
 				{
 					echo
@@ -37,9 +38,9 @@ $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->pr
                         <span class="currency">руб</span>
                     </div>';
 				}
-				?>
+?>
 			</div>
-			<?php
+<?php
 			echo
 			'<div class="action col-xs-4 no-all">';
 			if ($data->sale)
@@ -53,10 +54,14 @@ $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->pr
 			echo
 			'</div>
             <a href="" class="hidden_link how_to_order">Где купить?</a>
-            <a href="" class="hidden_link">Оставить заявку</a>';
-			?>
+            <a href="" class="hidden_link submit_your_application"
+                data-price="'.$price.'"
+                data-title="'.$data->title.'"
+                data-id="'.$data->id.'">
+                Оставить заявку
+            </a>';
+?>
 		</a>
 		<div class="clearfix"></div>
 	</div>
-
 </div>

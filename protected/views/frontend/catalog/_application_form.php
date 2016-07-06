@@ -1,5 +1,5 @@
 <?php
-	$model = new ApplicationForm();
+	$model = new OrdersForm();
 
     $form = $this->beginWidget('BsActiveForm',
 	    array(
@@ -17,6 +17,10 @@
 	    )
     );
 ?>
+	<?php echo $form->hiddenField($model, 'id', array('value' => $product->id)) ;?>
+	<?php echo $form->hiddenField($model, 'title', array('value' => $product->title)) ;?>
+	<?php echo $form->hiddenField($model, 'price', array('value' => $price)) ;?>
+
 	<div class="form-group">
 		<?php echo $form->textField($model, 'name', array('placeholder' => 'Ваше имя*')) ;?>
 		<?php echo $form->error($model, 'name') ;?>

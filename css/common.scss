@@ -1570,7 +1570,7 @@ header {
     font-family: $r;
   }
 }
-#how_to_order {
+#how_to_order, #submit_your_application {
   background-color: rgba(0, 0, 0, .6);
   z-index: 10000;
   .address {
@@ -1620,5 +1620,47 @@ header {
   .modal-body {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+#submit_your_application {
+  .modal-dialog {
+    width: 368px;
+    margin-top: 200px;
+  }
+  .modal-body {
+    padding: 0;
+    .title_product {
+      background-color: #f1f1f1;
+      vertical-align: middle;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+#orders-form {
+  padding-left: 50px;
+  padding-right: 50px;
+  input {
+    height: 45px;
+    border-radius: 0;
+    font-size: 16px;
+    color: #000;
+  }
+  .form-group {
+    margin-bottom: 25px;
+  }
+  .button {
+    input {
+      color: #000;
+      background-color: #ffea00;
+      width: 100%;
+      outline: none;
+      border: none;
+    }
   }
 }

@@ -1844,12 +1844,12 @@ header .search #form-search .search-link.active, header .search #form-search .se
 }
 
 /* line 1573, common.scss */
-#how_to_order {
+#how_to_order, #submit_your_application {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10000;
 }
 /* line 1577, common.scss */
-#how_to_order .address span {
+#how_to_order .address span, #submit_your_application .address span {
   font-size: 18px;
   color: #1d0f00;
   padding-left: 20px;
@@ -1857,13 +1857,13 @@ header .search #form-search .search-link.active, header .search #form-search .se
   background: transparent url("/images/icon_motovelo-s801204463c.png") -10px 0 no-repeat;
 }
 /* line 1584, common.scss */
-#how_to_order .address p {
+#how_to_order .address p, #submit_your_application .address p {
   margin-top: 10px;
   font-size: 16px;
   color: #393126;
 }
 /* line 1591, common.scss */
-#how_to_order .phones span {
+#how_to_order .phones span, #submit_your_application .phones span {
   font-size: 18px;
   margin-top: 20px;
   color: #1d0f00;
@@ -1874,28 +1874,73 @@ header .search #form-search .search-link.active, header .search #form-search .se
   background: transparent url("/images/icon_motovelo-s801204463c.png") -12px -632px no-repeat;
 }
 /* line 1601, common.scss */
-#how_to_order .phones div {
+#how_to_order .phones div, #submit_your_application .phones div {
   font-size: 16px;
   margin-bottom: 8px;
   color: #02040b;
 }
 /* line 1607, common.scss */
-#how_to_order .modal-content {
+#how_to_order .modal-content, #submit_your_application .modal-content {
   border: none;
   border-radius: 0;
 }
 /* line 1611, common.scss */
-#how_to_order .modal-header {
+#how_to_order .modal-header, #submit_your_application .modal-header {
   padding-left: 25px;
   border-bottom: 3px solid #1c3e97;
 }
 /* line 1616, common.scss */
-#how_to_order .modal-dialog {
+#how_to_order .modal-dialog, #submit_your_application .modal-dialog {
   width: 470px;
   margin-top: 200px;
 }
 /* line 1620, common.scss */
-#how_to_order .modal-body {
+#how_to_order .modal-body, #submit_your_application .modal-body {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+/* line 1627, common.scss */
+#submit_your_application .modal-dialog {
+  width: 368px;
+  margin-top: 200px;
+}
+/* line 1631, common.scss */
+#submit_your_application .modal-body {
+  padding: 0;
+}
+/* line 1633, common.scss */
+#submit_your_application .modal-body .title_product {
+  background-color: #f1f1f1;
+  vertical-align: middle;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* line 1645, common.scss */
+#orders-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* line 1648, common.scss */
+#orders-form input {
+  height: 45px;
+  border-radius: 0;
+  font-size: 16px;
+  color: #000;
+}
+/* line 1654, common.scss */
+#orders-form .form-group {
+  margin-bottom: 25px;
+}
+/* line 1658, common.scss */
+#orders-form .button input {
+  color: #000;
+  background-color: #ffea00;
+  width: 100%;
+  outline: none;
+  border: none;
 }
