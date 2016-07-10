@@ -9,6 +9,7 @@ return array(
         "cartinfo" => "site/cartinfo",
         "search" => "site/search",
         "order" => "site/order",
+        "map" => "site/map",
         "<_c:(profile|user|client|profileblog)>"=>"<_c>/index",
         "<_c:(profile|user|client|profileblog)>/<_a>"=>"<_c>/<_a>",
         "<_a:(login|logout|register)>"=>"user/<_a>",

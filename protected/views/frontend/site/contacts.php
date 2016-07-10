@@ -15,7 +15,7 @@
                         <div class="address">
                             <i>Адрес</i>
                             <span><?php echo $this->address[0]->text ;?></span>
-                            <a href = "">Показать на карте</a>
+                            <a href = "<?php echo $this->createUrl('/map') ;?>" target="_blank">Показать на карте</a>
                         </div>
                         <div class="email">
                             <i>E-mail</i>

@@ -187,6 +187,11 @@
             $this->render('contacts',array('model'=>$model, 'adresses'=>$adresses, 'settings'=>$settings, 'phones' => $phones));
         }
 
+        public function actionMap()
+        {
+            $this->renderPartial('map');
+        }
+
         public function actionPage($url)
         {
             $this->setPageForUrl($url);
