@@ -8,6 +8,7 @@
         $image = Yii::app()->params['noimage'];
     }
 
+    $discount = 0;
     $sale = CatalogProducts::model()->getSalePrice($data->price, $data->sale_info, 0);
     $price = ($sale != $data->price && $sale != 0) ? $sale : number_format($data->price, 0, '.', ' ');
 ?>
@@ -28,6 +29,7 @@
 <?php
                 if ($sale)
                 {
+                    $discount = $data->price - str_replace(" ", "", $sale);
                     echo
                     '<div class="price-old text-shadow">
                         <b>
@@ -55,6 +57,7 @@
             <a href="" class="how_to_order hidden_link">Где купить?</a>
             <a href="" class="hidden_link submit_your_application"
                 data-price="'.$price.'"
+                data-discount="'.$discount.'"
                 data-title="'.$data->title.'"
                 data-id="'.$data->id.'">
                 Оставить заявку

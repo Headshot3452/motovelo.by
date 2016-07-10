@@ -63,7 +63,7 @@
 
             echo
                 '<tr class="one-order-product">
-                    <td class="text-left number">'.$key.'</td>
+                    <td class="text-left number">'. ++$key .'</td>
                     <td class="text-center">
                         <a href="/'.$link.'" target="_blank">
                             <img src="/'.$image.'">
@@ -143,7 +143,7 @@
 </div>
 <div class="row">
     <div class="col-md-12 order-buttons text-right" data-order="<?php echo $order->id ;?>">
-        <button class="btn btn-primary">Печатать</button>
+<!--        <button class="btn btn-primary">Печатать</button>-->
         <button class="btn btn-success" data-status="3">Комплектовать</button>
         <a class="underline" href="" onclick="location.reload();">Отмена</a>
     </div>

@@ -30,7 +30,7 @@
             else
             {
                 $user_info = unserialize($data['user_info']);
-                $fio = $user_info['last_name'] .' '. $user_info['name'] . ' ' . $user_info['patronymic'];
+                $fio = $user_info['name'];
                 $email = $user_info['email'];
                 $phone = $user_info['phone'];
             }

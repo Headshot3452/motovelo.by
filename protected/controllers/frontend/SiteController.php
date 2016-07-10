@@ -22,6 +22,87 @@
             $this->render('index', array('category' => $category));
         }
 
+        public function actionOrder()
+        {
+            if(isset($_POST['OrdersForm']))
+            {
+                $model = new OrdersForm('full');
+
+                $model->attributes = $_POST['OrdersForm'];
+
+                if($model->validate())
+                {
+                    $order = new Orders();
+
+                    $price = str_replace(" ", "", CHtml::encode($_POST['OrdersForm']['price']));
+                    $discount = CHtml::encode($_POST['OrdersForm']['discount']);
+
+                    $product_id = CHtml::encode($_POST['OrdersForm']['id']);
+
+                    $order->count = 1;
+                    $order->sum = $order->count * $price;
+                    $order->status = Orders::STATUS_OK;
+                    $order->type_delivery = '1';
+                    $order->type_payments ='1';
+
+                    $info = array(
+                        'name' => Chtml::encode($_POST["OrdersForm"]["name"]),
+                        'email' => Chtml::encode($_POST["OrdersForm"]["email"]),
+                        'phone' => Chtml::encode($_POST["OrdersForm"]["phone"]),
+                    );
+                    $order->user_info = serialize($info);
+
+                    $order_info = $order->getInstanceRelation('orderItems');
+
+                    $order_info->product_id = $product_id;
+                    $order_info->title = Chtml::encode($_POST["OrdersForm"]["title"]);
+                    $order_info->price = $price + $discount;
+                    $order_info->discount = $price;
+                    $order_info->count = 1;
+                    $order_info->status = Orders::STATUS_OK;
+
+                    if($order->validate())
+                    {
+                        $order->save();
+                        $order_info->order_id = $order->id;
+
+                        if($order_info->validate())
+                        {
+                            $order_info->save();
+                            Yii::app()->user->setFlash('modalReview', array('header' => 'Заявка успешно отправлена', 'content' => 'В ближайшее время с вами свяжется наш менеджер.'));
+
+                            $body = Yii::app()->controller->renderEmail('new_order', array('model' => $order));
+
+                            if(!isset($order->email))
+                            {
+                                $info = unserialize($order->user_info);
+                                $email = $info['email'];
+                            }
+                            else
+                            {
+                                $email = $order->email;
+                            }
+
+                            Core::sendAdminMessageOrder($email, $body, Yii::t('app', 'Issued a new order'));
+                        }
+                    }
+                }
+                else
+                {
+                    if (Yii::app()->request->isAjaxRequest)
+                    {
+                        $error = CActiveForm::validate($model);
+                        if ($error != '[]')
+                        {
+                            echo $error;
+                        }
+                        Yii::app()->end();
+                    }
+                }
+            }
+            $this->redirect($_SERVER['HTTP_REFERER']);
+        }
+
         public function actionSearch($term)
         {
             $this->setPageForUrl(Yii::app()->request->getPathInfo());
@@ -104,21 +185,6 @@
             }
 
             $this->render('contacts',array('model'=>$model, 'adresses'=>$adresses, 'settings'=>$settings, 'phones' => $phones));
-        }
-
-        public function actionApplication()
-        {
-            if (isset($_POST['ApplicationForm']))
-            {
-                $model = new ApplicationForm();
-                $model->attributes = $_POST['ApplicationForm'];
-                if ($model->validate())
-                {
-//                    $bodyEmail = $this->renderEmail('contacts', array('model' => $model));
-//                    $mail = Yii::app()->mailer->isHtml(true)->setFrom($model->email);
-//                    $mail->send($this->settings->email, 'Subject', $bodyEmail);
-                }
-            }
         }
 
         public function actionPage($url)

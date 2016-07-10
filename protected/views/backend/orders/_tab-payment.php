@@ -24,22 +24,22 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="form-group">
-            <label for="time1" class="col-md-3 control-label text-right color-gray">Передача от клиента</label>
-            <div class="col-md-3 input time">
-                <input type="text" class="form-control text-center pull-left" id="time1" value="12.12.2016">
-                <input type="text" class="form-control text-center pull-right" id="time2" value="12:12">
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="form-group">
-            <label for="time3" class="col-md-3 control-label text-right color-gray">Принято у курьера:</label>
-            <div class="col-md-3 input time">
-                <input type="text" class="form-control text-center pull-left" id="time3" value="12.12.2016">
-                <input type="text" class="form-control text-center pull-right" id="time4" value="12:21">
-            </div>
-            <div class="clearfix"></div>
-        </div>
+<!--        <div class="form-group">-->
+<!--            <label for="time1" class="col-md-3 control-label text-right color-gray">Передача от клиента</label>-->
+<!--            <div class="col-md-3 input time">-->
+<!--                <input type="text" class="form-control text-center pull-left" id="time1" value="12.12.2016">-->
+<!--                <input type="text" class="form-control text-center pull-right" id="time2" value="12:12">-->
+<!--            </div>-->
+<!--            <div class="clearfix"></div>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="time3" class="col-md-3 control-label text-right color-gray">Принято у курьера:</label>-->
+<!--            <div class="col-md-3 input time">-->
+<!--                <input type="text" class="form-control text-center pull-left" id="time3" value="12.12.2016">-->
+<!--                <input type="text" class="form-control text-center pull-right" id="time4" value="12:21">-->
+<!--            </div>-->
+<!--            <div class="clearfix"></div>-->
+<!--        </div>-->
 
         <div class="form-group buttons">
             <?php echo BsHtml::submitButton(Yii::t('app','Save'),array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>

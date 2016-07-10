@@ -1,13 +1,14 @@
 <?php
 return array(
-    'urlManager'=>array(
-        ""=>"site/index",
-        "contacts"=>"feedback/contacts",
-        "application"=>"site/application",
-        "userlogin"=>"client/loginUser",
-        "cart"=>"site/cart",
-        "cartinfo"=>"site/cartinfo",
-        "search"=>"site/search",
+    'urlManager' => array(
+        "" => "site/index",
+        "contacts" => "feedback/contacts",
+        "application" => "site/application",
+        "userlogin" => "client/loginUser",
+        "cart" => "site/cart",
+        "cartinfo" => "site/cartinfo",
+        "search" => "site/search",
+        "order" => "site/order",
         "<_c:(profile|user|client|profileblog)>"=>"<_c>/index",
         "<_c:(profile|user|client|profileblog)>/<_a>"=>"<_c>/<_a>",
         "<_a:(login|logout|register)>"=>"user/<_a>",

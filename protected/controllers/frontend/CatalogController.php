@@ -117,12 +117,12 @@
 
             $this->getPageModule('tree');
 
-            $tree = $this->getPageTree($id);
-
             if (!empty($path['breadcrumbs']))
             {
                 $this->setBreadcrumbs($path['breadcrumbs'], 'catalog/tree');
             }
+
+            $tree = $this->getPageTree($id);
 
             if (isset($tree))
             {

@@ -146,6 +146,8 @@
                     $bodyEmail = $this->renderEmail('contacts', array('model' => $applicationModel));
                     $mail = Yii::app()->mailer->isHtml(true)->setFrom($applicationModel->email);
                     $mail->send($this->settings->email_callback, 'Обратная связь', $bodyEmail);
+
+                    Yii::app()->user->setFlash('modalReview', array('header' => 'Письмо отправлено ', 'content' => 'В ближайшее время с вами свяжется наш менеджер.'));
                 }
 
                 $feedback_answer = new FeedbackAnswers();

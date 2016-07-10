@@ -17,6 +17,7 @@
     $formatter->numberFormat = array('decimals' => '2', 'decimalSeparator'=>'.', 'thousandSeparator' => ' ');
 
     $total = $formatter->number($total); //сумма заказа
+
 ?>
 
 <div class="row orders-info">
@@ -25,10 +26,12 @@
     <div class="col-md-1"><a class="color-primary underline archive" href="#">Архив</a></div>
     <div class="col-md-6 all-info">
         <span class="count-orders">
-        <span class="color-gray">Количество заказов:</span> <?php echo $item_count;?>
+            <span class="color-gray">Количество заказов:</span> <?php echo $item_count;?>
         </span>
         <span>
-        <span class="color-gray">На сумму:</span> <span class="color-primary"><?php echo $total ;?></span> <span class="text-uppercase">Byr</span>
+            <span class="color-gray">На сумму:</span>
+            <span class="color-primary"><?php echo $total ;?></span>
+            <span class="text-uppercase"><?php echo $this->currency_ico["currency_name"] ;?></span>
         </span>
     </div>
     <div class="col-md-2 pag-cont">

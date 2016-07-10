@@ -99,7 +99,7 @@
         public function rules()
         {
             return array(
-                array('count, sum, type_delivery, type_payments, status', 'required'),
+                array('count, sum, type_delivery, type_payments, status, user_info', 'required'),
                 array('type_delivery, type_payments, paid, status', 'numerical', 'integerOnly' => true),
                 array('sum_delivery, sum_paid', 'numerical'),
                 array('user_id, address_id, manager_id, executor_id, picker_id, count, sum, create_time, update_time, delivery_time', 'length', 'max' => 10),
@@ -269,23 +269,23 @@
         {
             parent::afterSave();
 
-            if (!empty($this->orderItems))
-            {
-                foreach($this->orderItems as $item)
-                {
-                    $item->order_id = $this->id;
-                    $item->save();
-                }
-            }
+//            if (!empty($this->orderItems))
+//            {
+//                foreach($this->orderItems as $item)
+//                {
+//                    $item->order_id = $this->id;
+//                    $item->save();
+//                }
+//            }
 
-            if ($this->isNewRecord || $this->scenario == 'insert')
-            {
-                if ($this->hasEventHandler('onNewOrder'))
-                {
-                    $event= new CModelEvent($this);
-                    $this->onNewOrder($event);
-                }
-            }
+//            if ($this->isNewRecord || $this->scenario == 'insert')
+//            {
+//                if ($this->hasEventHandler('onNewOrder'))
+//                {
+//                    $event= new CModelEvent($this);
+//                    $this->onNewOrder($event);
+//                }
+//            }
         }
 
         public function behaviors()

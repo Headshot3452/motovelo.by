@@ -111,6 +111,13 @@
             self::sendMessage($settings->email, $subject, $message, $email);
         }
 
+        public static function sendAdminMessageOrder($email,$message,$subject)
+        {
+            $settings = Settings::getSettings(Yii::app()->params['settings_id']);
+
+            self::sendMessage($settings->email_order, $subject, $message, $email);
+        }
+
         public static function sendFromAdminMessage($email,$message,$subject)
         {
             $settings = Settings::getSettings(Yii::app()->params['settings_id']);

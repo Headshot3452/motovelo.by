@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="form-group buttons">
-                            <?php echo BsHtml::submitButton('Оставить заявку', array('/application')) ;?>
+                            <?php echo BsHtml::submitButton('Оставить заявку') ;?>
                         </div>
                     </div>
 

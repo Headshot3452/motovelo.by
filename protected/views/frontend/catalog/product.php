@@ -94,6 +94,7 @@
                                                 </div>';
                                                 if ($sale)
                                                 {
+                                                    $discount = $product->price - str_replace(" ", "", $sale);
                                                     echo
                                                     '<div class="price-old text-shadow">
                                                         <b>' . number_format($product->price, 0, '.', ' ') . '</b>
@@ -116,7 +117,7 @@
                                                             array(
                                                                 'label' => 'Оставить заявку',
                                                                 'active' => false,
-                                                                'content' => $this->renderPartial('_application_form', array('product' => $product, 'price' => $price), true)
+                                                                'content' => $this->renderPartial('_application_form', array('product' => $product, 'price' => $price, 'discount' => $discount), true)
                                                             ),
                                                         ),
                                                     )

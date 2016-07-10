@@ -166,6 +166,7 @@
             $("#submit_your_application #OrdersForm_id").val(p.id);
             $("#submit_your_application #OrdersForm_title").val(p.title);
             $("#submit_your_application #OrdersForm_price").val(p.price);
+            $("#submit_your_application #OrdersForm_discount").val(p.discount);
 
             $("#submit_your_application").modal();
             return false;

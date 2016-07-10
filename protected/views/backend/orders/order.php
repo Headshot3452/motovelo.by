@@ -35,7 +35,7 @@
                         else
                         {
                             $user_info = unserialize($order['user_info']);
-                            $this->fio = $user_info['last_name'] .' '. $user_info['name'] . ' ' . $user_info['patronymic'];
+                            $this->fio = $user_info['name'];
                             $this->email = $user_info['email'];
                             $this->phone = $user_info['phone'];
                         }
@@ -75,40 +75,40 @@
 ?>
         </div>
     </div>
-    <div class="col-md-2 font-12 time">
-        <div class="color-gray">
+<!--    <div class="col-md-2 font-12 time">-->
+<!--        <div class="color-gray">-->
 <?php
-            $flag = 0;
-            if ($order->status != Orders::STATUS_COMPLETED && $order->status > 0)
-            {
-                $flag = 1;
-                echo 'Осталось';
-            }
-            else
-            {
-                echo 'Завершен';
-            }
-?>
-        </div>
+//            $flag = 0;
+//            if ($order->status != Orders::STATUS_COMPLETED && $order->status > 0)
+//            {
+//                $flag = 1;
+//                echo 'Осталось';
+//            }
+//            else
+//            {
+//                echo 'Завершен';
+//            }
+//?>
+<!--        </div>-->
 <?php
-        if ($flag)
-        {
-            echo '<div class="times">'.$order->f_delivery_end.'</div>';
-        }
-        else
-        {
-            $date = explode(' ', $order->f_update_time);
-            if (isset($date[1]))
-            {
-                echo '<div class="times" data-toggle="tooltip" data-placement="bottom" title="' . $date[1] . '" >' . $date[0] . '</div>';
-            }
-        }
+//        if ($flag)
+//        {
+//            echo '<div class="times">'.$order->f_delivery_end.'</div>';
+//        }
+//        else
+//        {
+//            $date = explode(' ', $order->f_update_time);
+//            if (isset($date[1]))
+//            {
+//                echo '<div class="times" data-toggle="tooltip" data-placement="bottom" title="' . $date[1] . '" >' . $date[0] . '</div>';
+//            }
+//        }
 ?>
-    </div>
-    <div class="col-md-2 font-12 time delivery">
-        <div class="color-gray">Время доставки</div>
-        <div class="times"><?php echo $order->f_delivery_time.', '.$order->delivery_hours ?></div>
-    </div>
+<!--    </div>-->
+<!--    <div class="col-md-2 font-12 time delivery">-->
+<!--        <div class="color-gray">Время доставки</div>-->
+<!--        <div class="times">--><?php //echo $order->f_delivery_time.', '.$order->delivery_hours ?><!--</div>-->
+<!--    </div>-->
 </div>
 <div class="order-block row">
     <div class="tabs-block">
@@ -141,25 +141,25 @@
                         'active' => false,
                         'content' => $this->renderPartial('_tab-payment', array('order' => $order, 'form' => $form), true)
                     ),
-                    array(
-                        'label' => 'Перенос заказа',
-                        'active' => false,
-                        'content' => $this->renderPartial('_tab-transfer', array('order' => $order,), true)
-                    ),
-                    array(
-                        'label' => Yii::t('app', 'Refusal'),
-                        'active' => false,
-                        'content' => $this->renderPartial('_tab-refusal', array('order' => $order,), true)
-                    ),
-                    array(
-                        'label' => Yii::t('app', 'Review'),
-                        'active' => false,
-                        'content' => $this->renderPartial('_tab-review', array('order' => $order,), true)
-                    ),
-                    array(
-                        'label' => Yii::t('app', 'Event log'),
-                        'active' => false,
-                    ),
+//                    array(
+//                        'label' => 'Перенос заказа',
+//                        'active' => false,
+//                        'content' => $this->renderPartial('_tab-transfer', array('order' => $order,), true)
+//                    ),
+//                    array(
+//                        'label' => Yii::t('app', 'Refusal'),
+//                        'active' => false,
+//                        'content' => $this->renderPartial('_tab-refusal', array('order' => $order,), true)
+////                    ),
+//                    array(
+//                        'label' => Yii::t('app', 'Review'),
+//                        'active' => false,
+//                        'content' => $this->renderPartial('_tab-review', array('order' => $order), true)
+//                    ),
+//                    array(
+//                        'label' => Yii::t('app', 'Event log'),
+//                        'active' => false,
+//                    ),
                 ),
             )
         );

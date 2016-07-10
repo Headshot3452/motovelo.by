@@ -12,68 +12,55 @@
 <?php
         if($info)
         {
-            if(!empty($info['lastName']) && !empty($info['name']))
+            if(!empty($info['name']))
             {
 ?>
                 <tr>
-                    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo Yii::t('app','User name'); ?></td>
-                    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $info['lastName']; ?></div></td>
+                    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo Yii::t('app', 'User'); ?></td>
+                    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $info['name']; ?></div></td>
                 </tr>
 <?php
             }
-            if(!empty($info['city']))
+            if(!empty($info['name']))
             {
 ?>
                 <tr>
-                    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo Yii::t('app','City'); ?></td>
-                    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $info['city']; ?></div></td>
-                </tr>
-<?php
-            }
-            if(!empty($info['address']))
-            {
-?>
-                <tr>
-                    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo Yii::t('app','Address'); ?></td>
-                    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $info['address']; ?></div></td>
+                    <td style="text-align:right;width:110px;border:solid 1px #999999;padding: 4px 6px 4px 6px;"><?php echo Yii::t('app', 'Phone'); ?></td>
+                    <td style="border:solid 1px #999999;padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $info['phone']; ?></div></td>
                 </tr>
 <?php
             }
         }
 ?>
     <tr>
-        <td style="text-align:right; width:110px; border:solid 1px #999999; padding: 4px 6px 4px 6px;"><?php echo $model->getAttributeLabel('comment'); ?></td>
-        <td style="border:solid 1px #999999; padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $model->comment; ?></div></td>
-    </tr>
-    <tr>
         <td style="text-align:right; width:110px; border:solid 1px #999999; padding: 4px 6px 4px 6px;">Товары</td>
         <td style="border:solid 1px #999999; padding: 4px 6px 4px 6px;">
             <div class="input-xlarge">
 <?php
-                    foreach($model->orderItems as $item)
+                foreach($model->orderItems as $item)
+                {
+                    $sale = 0;
+
+                    if($item->discount)
                     {
-                        $sale = 0;
-
-                        if($item->discount)
-                        {
-                            $sale = $item->price - $item->discount;
-                        }
-
-                        $real_price = $item->price - $sale;
-
-                        $item_price = $item->count * $real_price;
-
-                        $total += $item_price;
-
-                        echo  $item->product_id.': '.$item->title.' количество - '.$item->count.'шт. по цене - '.$item->price.' со скидкой - '.$sale.' итог: '.$item_price.'<br>';
+                        $sale = $item->price - $item->discount;
                     }
+
+                    $real_price = $item->price - $sale;
+
+                    $item_price = $item->count * $real_price;
+
+                    $total += $item_price;
+
+                    echo  $item->product_id.': '.$item->title.' количество - '.$item->count.'шт. по цене - '. number_format($item->price, 2, ".", " ") .' со скидкой - '. number_format($sale, 2, ".", " ") .' итог: '. number_format($item_price, 2, ".", " ") .'<br>';
+                }
 ?>
             </div>
         </td>
     </tr>
     <tr>
         <td style="text-align:right; width:110px; border:solid 1px #999999; padding: 4px 6px 4px 6px;">Итоговая сумма</td>
-        <td style="border:solid 1px #999999; padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo $total; ?></div></td>
+        <td style="border:solid 1px #999999; padding: 4px 6px 4px 6px;"><div class="input-xlarge"><?php echo number_format($total, 2, ".", " ") ;?></div></td>
     </tr>
     </tbody>
 </table>

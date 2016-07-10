@@ -43,8 +43,11 @@
 							'role' => 'form',
 						),
 						'enableAjaxValidation' => false,
-						'action' => $this->createUrl('site/contacts'),
+						'action' => $this->createUrl('/order'),
 						'enableClientValidation' => true,
+						'clientOptions' => array(
+							'validateOnSubmit' => true,
+						)
 					)
 				);
 
@@ -53,6 +56,7 @@
 				<?php echo $form->hiddenField($model, 'id', array('value' => '')) ;?>
 				<?php echo $form->hiddenField($model, 'title', array('value' => '')) ;?>
 				<?php echo $form->hiddenField($model, 'price', array('value' => '')) ;?>
+				<?php echo $form->hiddenField($model, 'discount', array('value' => '')) ;?>
 
 				<div class="form-group">
 					<?php echo $form->textField($model, 'name') ;?>

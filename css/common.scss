@@ -1570,7 +1570,12 @@ header {
     font-family: $r;
   }
 }
-#how_to_order, #submit_your_application {
+.modalReview {
+  .info_text {
+    padding: 25px;
+  }
+}
+#how_to_order, #submit_your_application, .modalReview {
   background-color: rgba(0, 0, 0, .6);
   z-index: 10000;
   .address {
@@ -1579,7 +1584,7 @@ header {
       color: #1d0f00;
       padding-left: 20px;
       line-height: 25px;
-      background: transparent url('/images/icon_motovelo-s801204463c.png') -10px 0 no-repeat;
+      background: sprite($motovelo, address) no-repeat;
     }
     p {
       margin-top: 10px;
@@ -1596,7 +1601,7 @@ header {
       display: block;
       margin-bottom: 20px;
       line-height: 25px;
-      background: transparent url('/images/icon_motovelo-s801204463c.png') -12px -632px no-repeat;
+      background: sprite($motovelo, phone) no-repeat;
     }
     div {
       font-size: 16px;
@@ -1623,7 +1628,7 @@ header {
   }
 }
 
-#submit_your_application {
+#submit_your_application, .modalReview {
   .modal-dialog {
     width: 368px;
     margin-top: 200px;

@@ -9,7 +9,7 @@
 			    'class' => 'form-horizontal',
 		    ),
 		    'enableAjaxValidation' => false,
-		    'action' => $this->createUrl('/application'),
+			'action' => $this->createUrl('/order'),
 		    'enableClientValidation' => true,
 		    'clientOptions' =>array(
 				'validateOnSubmit' => true,
@@ -20,6 +20,7 @@
 	<?php echo $form->hiddenField($model, 'id', array('value' => $product->id)) ;?>
 	<?php echo $form->hiddenField($model, 'title', array('value' => $product->title)) ;?>
 	<?php echo $form->hiddenField($model, 'price', array('value' => $price)) ;?>
+	<?php echo $form->hiddenField($model, 'discount', array('value' => $discount)) ;?>
 
 	<div class="form-group">
 		<?php echo $form->textField($model, 'name', array('placeholder' => 'Ваше имя*')) ;?>

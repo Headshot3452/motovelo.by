@@ -7,6 +7,7 @@
 		public $id;
 		public $title;
 		public $price;
+		public $discount;
 
 		public function rules()
 		{
@@ -14,6 +15,7 @@
 				array('name, phone', 'filter', 'filter' => 'trim'),
 				array('name, phone, id, title, price', 'required'),
 				array('email', 'email', 'validateIDN' => true),
+				array('discount', 'safe'),
 			);
 		}
 
@@ -26,6 +28,7 @@
 				'id' => 'Идентификатор товара',
 				'title' => 'Название товара',
 				'price' => 'Цена товара',
+				'discount' => 'Скидка',
 			);
 		}
 	}

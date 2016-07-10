@@ -1843,27 +1843,32 @@ header .search #form-search .search-link.active, header .search #form-search .se
   font-family: "Roboto-Regular";
 }
 
-/* line 1573, common.scss */
-#how_to_order, #submit_your_application {
+/* line 1574, common.scss */
+.modalReview .info_text {
+  padding: 25px;
+}
+
+/* line 1578, common.scss */
+#how_to_order, #submit_your_application, .modalReview {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10000;
 }
-/* line 1577, common.scss */
-#how_to_order .address span, #submit_your_application .address span {
+/* line 1582, common.scss */
+#how_to_order .address span, #submit_your_application .address span, .modalReview .address span {
   font-size: 18px;
   color: #1d0f00;
   padding-left: 20px;
   line-height: 25px;
-  background: transparent url("/images/icon_motovelo-s801204463c.png") -10px 0 no-repeat;
+  background: url('/images/icon_motovelo-se25a9db4d0.png') -13px 0 no-repeat;
 }
-/* line 1584, common.scss */
-#how_to_order .address p, #submit_your_application .address p {
+/* line 1589, common.scss */
+#how_to_order .address p, #submit_your_application .address p, .modalReview .address p {
   margin-top: 10px;
   font-size: 16px;
   color: #393126;
 }
-/* line 1591, common.scss */
-#how_to_order .phones span, #submit_your_application .phones span {
+/* line 1596, common.scss */
+#how_to_order .phones span, #submit_your_application .phones span, .modalReview .phones span {
   font-size: 18px;
   margin-top: 20px;
   color: #1d0f00;
@@ -1871,46 +1876,46 @@ header .search #form-search .search-link.active, header .search #form-search .se
   display: block;
   margin-bottom: 20px;
   line-height: 25px;
-  background: transparent url("/images/icon_motovelo-s801204463c.png") -12px -632px no-repeat;
+  background: url('/images/icon_motovelo-se25a9db4d0.png') -15px -633px no-repeat;
 }
-/* line 1601, common.scss */
-#how_to_order .phones div, #submit_your_application .phones div {
+/* line 1606, common.scss */
+#how_to_order .phones div, #submit_your_application .phones div, .modalReview .phones div {
   font-size: 16px;
   margin-bottom: 8px;
   color: #02040b;
 }
-/* line 1607, common.scss */
-#how_to_order .modal-content, #submit_your_application .modal-content {
+/* line 1612, common.scss */
+#how_to_order .modal-content, #submit_your_application .modal-content, .modalReview .modal-content {
   border: none;
   border-radius: 0;
 }
-/* line 1611, common.scss */
-#how_to_order .modal-header, #submit_your_application .modal-header {
+/* line 1616, common.scss */
+#how_to_order .modal-header, #submit_your_application .modal-header, .modalReview .modal-header {
   padding-left: 25px;
   border-bottom: 3px solid #1c3e97;
 }
-/* line 1616, common.scss */
-#how_to_order .modal-dialog, #submit_your_application .modal-dialog {
+/* line 1621, common.scss */
+#how_to_order .modal-dialog, #submit_your_application .modal-dialog, .modalReview .modal-dialog {
   width: 470px;
   margin-top: 200px;
 }
-/* line 1620, common.scss */
-#how_to_order .modal-body, #submit_your_application .modal-body {
+/* line 1625, common.scss */
+#how_to_order .modal-body, #submit_your_application .modal-body, .modalReview .modal-body {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-/* line 1627, common.scss */
-#submit_your_application .modal-dialog {
+/* line 1632, common.scss */
+#submit_your_application .modal-dialog, .modalReview .modal-dialog {
   width: 368px;
   margin-top: 200px;
 }
-/* line 1631, common.scss */
-#submit_your_application .modal-body {
+/* line 1636, common.scss */
+#submit_your_application .modal-body, .modalReview .modal-body {
   padding: 0;
 }
-/* line 1633, common.scss */
-#submit_your_application .modal-body .title_product {
+/* line 1638, common.scss */
+#submit_your_application .modal-body .title_product, .modalReview .modal-body .title_product {
   background-color: #f1f1f1;
   vertical-align: middle;
   padding-top: 25px;
@@ -1920,23 +1925,23 @@ header .search #form-search .search-link.active, header .search #form-search .se
   margin-bottom: 25px;
 }
 
-/* line 1645, common.scss */
+/* line 1650, common.scss */
 #orders-form {
   padding-left: 50px;
   padding-right: 50px;
 }
-/* line 1648, common.scss */
+/* line 1653, common.scss */
 #orders-form input {
   height: 45px;
   border-radius: 0;
   font-size: 16px;
   color: #000;
 }
-/* line 1654, common.scss */
+/* line 1659, common.scss */
 #orders-form .form-group {
   margin-bottom: 25px;
 }
-/* line 1658, common.scss */
+/* line 1663, common.scss */
 #orders-form .button input {
   color: #000;
   background-color: #ffea00;

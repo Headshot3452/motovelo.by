@@ -59,7 +59,7 @@ class CoreEvents extends CModelEvent
         {
             $email = $sender->email;
         }
-        Core::sendAdminMessage($email, $body, Yii::t('app', 'Issued a new order'));
+        Core::sendAdminMessageOrder($email, $body, Yii::t('app', 'Issued a new order'));
     }
 
     public static function onAddModule($event)

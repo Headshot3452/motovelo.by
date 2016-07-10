@@ -108,8 +108,8 @@
                 {
                     $new_fio = explode(' ', $_POST['order_user']['fio']);
                     $user_info['name'] = isset($new_fio[1]) ? $new_fio[1] : $user_info['name'];
-                    $user_info['last_name'] = isset($new_fio[0]) ? $new_fio[0] : $user_info['last_name'];
-                    $user_info['patronymic'] = isset($new_fio[2]) ? $new_fio[2] : $user_info['patronymic'];
+//                    $user_info['last_name'] = isset($new_fio[0]) ? $new_fio[0] : $user_info['last_name'];
+//                    $user_info['patronymic'] = isset($new_fio[2]) ? $new_fio[2] : $user_info['patronymic'];
                 }
 
                 if($_POST['order_user']['manager_id'])

@@ -32,7 +32,7 @@
         ),
     ),
 
-    'catalog_page' => 7,
+    'catalog_page' => 2,
     'akcii_page' => 4,
 
     'noavatar' => 'images/noavatar.png',
