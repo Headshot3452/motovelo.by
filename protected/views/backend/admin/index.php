@@ -15,7 +15,7 @@
                 $image = $value->files ? '/images/icon-admin/'.$value->files : Yii::app()->params['noimage'];
                 echo
                     '<div class="main_page_cont">
-                        <a href="/admin/'.CHtml::normalizeUrl($value->name).'"><img src="'.$image.'" alt=""/></a>
+                        <a href="/hsadmin/'.CHtml::normalizeUrl($value->name).'"><img src="'.$image.'" alt=""/></a>
                         <span>'.$value->title.'</span>
                     </div>';
             }

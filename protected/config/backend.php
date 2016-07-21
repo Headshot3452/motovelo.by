@@ -16,10 +16,10 @@ return CMap::mergeArray
                             'caseSensitive'=>false,
                             'urlSuffix'=>'/',
                             'rules' => array(
-                                    'admin'=>'admin/index',
-                                    'admin/action/<_a>'=>'admin/<_a>',
-                                    'admin/<_c>'=>'<_c>/index',
-                                    'admin/<_c>/<_a>'=>'<_c>/<_a>',
+                                    'hsadmin'=>'admin/index',
+                                    'hsadmin/action/<_a>'=>'admin/<_a>',
+                                    'hsadmin/<_c>'=>'<_c>/index',
+                                    'hsadmin/<_c>/<_a>'=>'<_c>/<_a>',
                             ),
                     ),
                     'log'=>array(

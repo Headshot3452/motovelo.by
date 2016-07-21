@@ -10,9 +10,9 @@ return CMap::mergeArray
                         'application.forms.*',
                 ),
                 'components' => array(
-//                    'errorHandler'=>array(
-//                        'errorAction'=>'site/error',
-//                    ),
+                    'errorHandler'=>array(
+                        'errorAction'=>'site/error',
+                    ),
                     'urlManager' => array(
                             'urlFormat' => 'path',
                             'showScriptName' => false,

@@ -75,7 +75,7 @@
                 'class' => 'WebUserFront',
                 'allowAutoLogin' => true,
                 'autoRenewCookie' => true,
-                'loginUrl' => '/login',
+                'loginUrl' => '/hslogin',
                 'onLogin' => array('CoreEvents', 'onLogin'),
             ),
             'session' => array(
